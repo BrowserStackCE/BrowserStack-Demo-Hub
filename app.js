@@ -198,11 +198,11 @@ function renderVideo(pid, vid) {
           <ul class="playlist">${playlist}</ul>
         </div>
         <div class="glass panel">
-          <h4>📚 Documentation</h4>
+          <h4>Documentation</h4>
           <ul class="linklist">${docs || "<li><p>None yet.</p></li>"}</ul>
         </div>
         <div class="glass panel">
-          <h4>🔗 Relevant Links</h4>
+          <h4>Relevant Links</h4>
           <ul class="linklist">${links || "<li><p>None yet.</p></li>"}</ul>
         </div>
       </div>
