@@ -21,7 +21,7 @@ const PRODUCTS = [
     videos: [
       { id: "aa-1", title: "1.1 Get Started | Record Your First Test on Low Code Automation", youtubeId: "https://www.youtube.com/watch?v=x0bHlVV2psU&list=PLN1KfW8k2lAk", duration: "05:11",
         description: "Start your Low Code Automation journey by recording a test directly in your browser. The intuitive test recorder turns every click, input, and navigation into an automated step in real time, with no coding or infrastructure setup, so QA testers, developers, and citizen testers can build their first automated test in minutes.",
-        docs: ["https://www.browserstack.com/docs/low-code-automation/get-started/create-test"], links: [] },
+        docs: [{ label: "Create Your First Test", url: "https://www.browserstack.com/docs/..." }], links: [] },
       { id: "aa-2", title: "1.2 Get Started | Add Validations: Visual, Text Assert, Element Presence", youtubeId: "https://youtu.be/_3k8DXgi8Cs?si=jWaECArBEYmwKCyq", duration: "03:31",
         description: "Add detailed validations to your recorded steps to verify both functionality and visuals. Assert on text, elements, and page state so every critical checkpoint in your end-to-end journey is checked automatically on each run..",
         docs: [], links: [] },
