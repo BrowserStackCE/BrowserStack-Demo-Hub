@@ -33,7 +33,7 @@ const PRODUCTS = [
         docs: [], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
       { id: "aa-5", title: "1.5 Get Started | Test Internal & Staging Environments with BrowserStack Local", youtubeId: "https://www.youtube.com/watch?v=BDrDstNDnv0&list=PLN1KfW8k2lAk", duration: "03:55",
         description: "Test applications that aren't publicly accessible. Use BrowserStack Local to securely run low-code tests against internal, staging, UAT, and pre-production environments hosted behind your firewall or proxy.",
-        docs: [{label: "", url: ""}], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
+        docs: [{label: "Test on Internal Networks", url: "https://www.browserstack.com/docs/low-code-automation/local-testing"}], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
       { id: "aa-6", title: "1.6 Get Started | Run Tests in Your CI/CD Pipeline", youtubeId: "https://www.youtube.com/watch?v=8vXaAJlpV40&list=PLN1KfW8k2lAk&index=6", duration: "02:43",
         description: "Shift your low-code tests left by running them automatically in your pipeline. Trigger tests on every build or deployment and pull results back into your CI/CD workflow for continuous, fast feedback.",
         docs: [{label: "", url: ""}], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
