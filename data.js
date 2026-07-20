@@ -84,7 +84,7 @@ const PRODUCTS = [
       {
         id: "an-1",
         title: "Getting Started with Analytics Suite",
-        youtubeId: "https://www.youtube.com/watch?v=GX9x62kFsVU",
+        youtubeId: "",
         description:
           "A quick tour of the Analytics Suite dashboard, key metrics, and how to build your first report.",
         docs: [
@@ -99,7 +99,7 @@ const PRODUCTS = [
       {
         id: "an-2",
         title: "Building Custom Dashboards",
-        youtubeId: "9bZkp7q19f0",
+        youtubeId: "",
         description:
           "Learn how to create, customize, and share dashboards tailored to your team's needs.",
         docs: [{ label: "Dashboard Docs", url: "https://example.com/analytics/dashboards" }],
@@ -116,7 +116,7 @@ const PRODUCTS = [
       {
         id: "crm-1",
         title: "CRM Onboarding Walkthrough",
-        youtubeId: "M7lc1UVf-VE",
+        youtubeId: "",
         description:
           "Set up your pipeline, import contacts, and configure your sales stages in minutes.",
         docs: [{ label: "Setup Guide", url: "https://example.com/crm/setup" }],
@@ -133,7 +133,7 @@ const PRODUCTS = [
       {
         id: "au-1",
         title: "Creating Your First Workflow",
-        youtubeId: "aqz-KE-bpKQ",
+        youtubeId: "",
         description:
           "Automate repetitive tasks with triggers, conditions, and actions — no code required.",
         docs: [{ label: "Workflow Docs", url: "https://example.com/automation/workflows" }],
