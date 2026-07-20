@@ -13,7 +13,7 @@
 // Example:  youtubeId: "GX9x62kFsVU", playlistId: "PLxxxxxxxxxxxxxxxx",
 const PRODUCTS = [
   {
-    id: "app-accessibility",
+    id: "Low-Code-Automation",
     name: "Low Code Automation",
     tagline: "Feature demos for Low Code Automation",
     icon: "",

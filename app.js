@@ -146,7 +146,10 @@ function renderDashboard(pid) {
   app.innerHTML = `
     <div class="crumbs fade"><a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span><span>${esc(p.name)}</span></div>
     <header class="hero fade" style="text-align:left;margin-bottom:32px;">
-      <h1 style="font-size:2.4rem;">${p.icon} ${esc(p.name)}</h1>
+      <h1 style="font-size:2.4rem;display:flex;align-items:center;gap:12px;">
+        ${p.iconSvg ? `<img src="${p.iconSvg}" alt="" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;" />` : `<span>${p.icon}</span>`}
+        ${esc(p.name)}
+      </h1>
       <h5>${esc(p.tagline)}</h5>
     </header>
     <div class="grid fade">${cards}</div>`;
