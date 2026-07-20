@@ -1,0 +1,216 @@
+// Demo Hub — hash-based router & views
+const app = document.getElementById("app");
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// Accepts a bare ID, a full watch URL, a youtu.be link, or a playlist URL.
+// Returns { videoId, playlistId } — either may be null.
+function parseYouTube(input) {
+  if (!input) return { videoId: null, playlistId: null };
+  const raw = String(input).trim();
+  // Bare 11-char video id (no slashes / query)
+  if (/^[\w-]{11}$/.test(raw)) return { videoId: raw, playlistId: null };
+  let videoId = null,
+    playlistId = null;
+  try {
+    const u = new URL(raw);
+    videoId = u.searchParams.get("v");
+    playlistId = u.searchParams.get("list");
+    if (!videoId && u.hostname.includes("youtu.be")) {
+      videoId = u.pathname.slice(1).split("/")[0] || null;
+    }
+    if (!videoId && u.pathname.includes("/embed/")) {
+      videoId = u.pathname.split("/embed/")[1].split("/")[0] || null;
+    }
+  } catch (e) {
+    // Not a URL — fall through with nulls
+  }
+  return { videoId: videoId || null, playlistId: playlistId || null };
+}
+
+// Build a privacy-friendly embed URL that supports single videos AND (unlisted) playlists.
+// Pass { jsapi: true } to enable the IFrame API (needed for auto-advance).
+function embedUrl(video, opts = {}) {
+  const parsed = parseYouTube(video.youtubeId);
+  const playlistId = video.playlistId || parsed.playlistId;
+  const base = { rel: "0", modestbranding: "1", playsinline: "1" };
+  if (opts.jsapi) {
+    base.enablejsapi = "1";
+    base.origin = location.origin;
+  }
+  const params = new URLSearchParams(base);
+  let path;
+  if (parsed.videoId) {
+    path = parsed.videoId;
+    if (playlistId) params.set("list", playlistId); // play this video within the (unlisted) playlist
+  } else if (playlistId) {
+    // Playlist-only: use the playlist embed endpoint
+    return `https://www.youtube-nocookie.com/embed/videoseries?${params.toString()}&list=${encodeURIComponent(playlistId)}`;
+  } else {
+    path = "";
+  }
+  return `https://www.youtube-nocookie.com/embed/${path}?${params.toString()}`;
+}
+
+// Load the YouTube IFrame API once and auto-advance to `nextHash` when the video ends.
+let ytApiPromise = null;
+function loadYouTubeAPI() {
+  if (window.YT && window.YT.Player) return Promise.resolve();
+  if (ytApiPromise) return ytApiPromise;
+  ytApiPromise = new Promise((resolve) => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    window.onYouTubeIframeAPIReady = () => resolve();
+    document.head.appendChild(tag);
+  });
+  return ytApiPromise;
+}
+
+function setupAutoAdvance(nextHash) {
+  const iframe = document.getElementById("yt-player");
+  if (!iframe) return;
+  loadYouTubeAPI().then(() => {
+    // Re-check: user may have navigated away before the API loaded.
+    if (document.getElementById("yt-player") !== iframe) return;
+    new window.YT.Player("yt-player", {
+      events: {
+        onStateChange: (e) => {
+          if (e.data === window.YT.PlayerState.ENDED && nextHash) {
+            location.hash = nextHash;
+          }
+        },
+      },
+    });
+  });
+}
+
+function thumbUrl(video) {
+  const { videoId } = parseYouTube(video.youtubeId);
+  return videoId
+    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+    : "https://img.youtube.com/vi/videoseries/hqdefault.jpg";
+}
+
+function render() {
+  const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
+  const parts = hash.split("/").filter(Boolean);
+  if (parts[0] === "product" && parts[2] === "video") {
+    renderVideo(parts[1], parts[3]);
+  } else if (parts[0] === "product") {
+    renderDashboard(parts[1]);
+  } else {
+    renderHome();
+  }
+  window.scrollTo(0, 0);
+}
+
+function renderHome() {
+  const cards = PRODUCTS.map(
+    (p) => `
+    <div class="glass card" onclick="location.hash='#/product/${p.id}'">
+      <div class="icon">${p.iconSvg ? `<img src="${p.iconSvg}" alt="${esc(p.name)}" style="width:32px;height:32px;object-fit:contain;" />` : p.icon}</div>
+      <h3>${esc(p.name)}</h3>
+      <p>${esc(p.tagline)}</p>
+      <div class="count">${p.videos.length} video${p.videos.length === 1 ? "" : "s"}</div>
+    </div>`
+  ).join("");
+  app.innerHTML = `
+    <header class="hero fade">
+      <h1>Your BrowserStack Demo Hub</h1><h2> Explore, Learn, Launch</h2>
+      <p>Explore interactive demos of BrowserStack's powerful testing features, all in one place. Whether you're new or looking to deepen your product knowledge, this hub helps you quickly understand, experience, and onboard with BrowserStack.
+
+</p>
+    </header>
+    <div class="grid fade">${cards}</div>`;
+}
+
+function renderDashboard(pid) {
+  const p = PRODUCTS.find((x) => x.id === pid);
+  if (!p) return renderHome();
+  const cards = p.videos.map(
+    (v) => `
+    <div class="glass card vthumb" onclick="location.hash='#/product/${p.id}/video/${v.id}'">
+      <div class="thumbwrap">
+        <img class="thumbimg" src="${thumbUrl(v)}" alt="${esc(v.title)}" onerror="this.classList.add('noimg')" />
+        <div class="play"><span>&#9654;</span></div>
+        ${v.duration ? `<span class="dur">${esc(v.duration)}</span>` : ""}
+      </div>
+      <div class="meta">
+        <h3>${esc(v.title)}</h3>
+        <p>${esc(v.description).slice(0, 90)}${v.description.length > 90 ? "…" : ""}</p>
+      </div>
+    </div>`
+  ).join("");
+  app.innerHTML = `
+    <div class="crumbs fade"><a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span><span>${esc(p.name)}</span></div>
+    <header class="hero fade" style="text-align:left;margin-bottom:32px;">
+      <h1 style="font-size:2.4rem;">${p.icon} ${esc(p.name)}</h1>
+      <h5>${esc(p.tagline)}</h5>
+    </header>
+    <div class="grid fade">${cards}</div>`;
+}
+
+function renderVideo(pid, vid) {
+  const p = PRODUCTS.find((x) => x.id === pid);
+  const idx = p ? p.videos.findIndex((x) => x.id === vid) : -1;
+  const v = idx >= 0 ? p.videos[idx] : null;
+  if (!v) return renderHome();
+  const docs = v.docs.map((d) => `<li><a href="${esc(d.url)}" target="_blank" rel="noopener">📄 ${esc(d.label)}</a></li>`).join("");
+  const links = v.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">🔗 ${esc(l.label)}</a></li>`).join("");
+  const playlist = p.videos
+    .map(
+      (item, i) => `
+      <li class="pl-item ${item.id === v.id ? "active" : ""}" onclick="location.hash='#/product/${p.id}/video/${item.id}'">
+        <span class="pl-index">${i + 1}</span>
+        <img class="pl-thumb" src="${thumbUrl(item)}" alt="" onerror="this.classList.add('noimg')" />
+        <span class="pl-meta">
+          <span class="pl-title">${esc(item.title)}</span>
+          <span class="pl-sub">
+            ${item.duration ? `<span class="pl-dur">${esc(item.duration)}</span>` : ""}
+            ${item.id === v.id ? '<span class="pl-now">Now playing</span>' : ""}
+          </span>
+        </span>
+      </li>`
+    )
+    .join("");
+  app.innerHTML = `
+    <div class="crumbs fade">
+      <a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span>
+      <a onclick="location.hash='#/product/${p.id}'">${esc(p.name)}</a><span>›</span>
+      <span>${esc(v.title)}</span>
+    </div>
+    <div class="detail fade">
+      <div class="glass player-wrap">
+        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="glass panel desc-panel">
+        <h2>${esc(v.title)}</h2>
+        <p>${esc(v.description)}</p>
+      </div>
+      <div class="side">
+        <div class="glass panel pl-panel">
+          <h4>▶ Playlist &middot; ${p.videos.length} videos</h4>
+          <ul class="playlist">${playlist}</ul>
+        </div>
+        <div class="glass panel">
+          <h4>📚 Documentation</h4>
+          <ul class="linklist">${docs || "<li><p>None yet.</p></li>"}</ul>
+        </div>
+        <div class="glass panel">
+          <h4>🔗 Relevant Links</h4>
+          <ul class="linklist">${links || "<li><p>None yet.</p></li>"}</ul>
+        </div>
+      </div>
+    </div>`;
+  // Auto-advance to the next video when this one ends.
+  const next = p.videos[idx + 1];
+  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null);
+  // Keep the active playlist item in view.
+  const active = document.querySelector(".pl-item.active");
+  if (active) active.scrollIntoView({ block: "nearest" });
+}
+
+window.addEventListener("hashchange", render);
+render();
