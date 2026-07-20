@@ -160,8 +160,16 @@ function renderVideo(pid, vid) {
   const idx = p ? p.videos.findIndex((x) => x.id === vid) : -1;
   const v = idx >= 0 ? p.videos[idx] : null;
   if (!v) return renderHome();
-  const docs = v.docs.map((d) => `<li><a href="${esc(d.url)}" target="_blank" rel="noopener">📄 ${esc(d.label)}</a></li>`).join("");
-  const links = v.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">🔗 ${esc(l.label)}</a></li>`).join("");
+  // Accepts both plain URL strings and { label, url } objects.
+  function renderLink(item, emoji) {
+    const url = typeof item === "string" ? item : item.url;
+    const label = typeof item === "string"
+      ? decodeURIComponent(url.split("/").filter(Boolean).pop().replace(/-/g, " "))
+      : item.label;
+    return `<li><a href="${esc(url)}" target="_blank" rel="noopener">${emoji} ${esc(label)}</a></li>`;
+  }
+  const docs = v.docs.map((d) => renderLink(d, "📄")).join("");
+  const links = v.links.map((l) => renderLink(l, "🔗")).join("");
   const playlist = p.videos
     .map(
       (item, i) => `
