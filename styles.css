@@ -170,9 +170,7 @@ header.hero p { color: var(--muted); margin-top: 16px; font-size: 1.15rem; max-w
   font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: 100px;
   background: rgba(44,116,246,0.08); border: 1px solid rgba(44,116,246,0.18);
   color: var(--ink); letter-spacing: 0.01em;
-  transition: background 0.25s, transform 0.25s;
 }
-.chip:hover { background: rgba(44,116,246,0.15); transform: translateY(-1px); }
 .section-label {
   font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--muted); margin-bottom: 20px;
