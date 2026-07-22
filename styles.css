@@ -19,6 +19,51 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Dark mode overrides */
+[data-theme="dark"] {
+  --bg: #0f1117;
+  --bg-alt: #161b27;
+  --navy: #f0f2f8;
+  --ink: #d8dce8;
+  --muted: #8892a8;
+  --border: #252d3d;
+  --card: #161b27;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md: 0 10px 30px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.5);
+}
+[data-theme="dark"] body { background: var(--bg); }
+[data-theme="dark"] .navbar {
+  background: rgba(15,17,23,0.88);
+  border-bottom-color: var(--border);
+}
+[data-theme="dark"] .hero-glass {
+  background: rgba(22,27,39,0.82);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .card {
+  background: var(--card);
+  border-color: var(--border);
+}
+[data-theme="dark"] .panel {
+  background: var(--card);
+  border-color: var(--border);
+}
+[data-theme="dark"] .player-wrap { background: #0a0c12; }
+[data-theme="dark"] .linklist a { background: #1e2535; border-color: var(--border); color: var(--ink); }
+[data-theme="dark"] .pl-item:hover { background: #1e2535; }
+[data-theme="dark"] .pl-item.active { background: rgba(44,116,246,0.18); }
+[data-theme="dark"] .chip { background: rgba(44,116,246,0.15); border-color: rgba(44,116,246,0.3); color: var(--ink); }
+
+/* Dark toggle button */
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.dark-toggle {
+  width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg-alt); cursor: pointer; display: grid; place-items: center;
+  font-size: 16px; transition: background 0.25s, transform 0.2s; flex-shrink: 0;
+}
+.dark-toggle:hover { background: var(--border); transform: scale(1.08); }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }

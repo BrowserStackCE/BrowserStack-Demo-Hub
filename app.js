@@ -237,5 +237,31 @@ function renderVideo(pid, vid) {
   if (active) active.scrollIntoView({ block: "nearest" });
 }
 
+// Dark mode toggle — persists in localStorage
+function initDarkMode() {
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") document.documentElement.setAttribute("data-theme", "dark");
+  updateToggleIcon();
+}
+function updateToggleIcon() {
+  const btn = document.getElementById("darkToggle");
+  if (!btn) return;
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  btn.querySelector(".toggle-icon").textContent = isDark ? "☀️" : "🌙";
+  btn.title = isDark ? "Switch to light mode" : "Switch to dark mode";
+}
+document.getElementById("darkToggle").addEventListener("click", () => {
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  if (isDark) {
+    document.documentElement.removeAttribute("data-theme");
+    localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+  updateToggleIcon();
+});
+initDarkMode();
+
 window.addEventListener("hashchange", render);
 render();
