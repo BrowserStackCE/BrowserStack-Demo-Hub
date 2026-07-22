@@ -63,6 +63,8 @@
   font-size: 16px; transition: background 0.25s, transform 0.2s; flex-shrink: 0;
 }
 .dark-toggle:hover { background: var(--border); transform: scale(1.08); }
+.navbar.is-home .nav-cta { display: none; }
+.nav-cta { cursor: pointer; }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -299,3 +301,25 @@ header.hero p { color: var(--muted); margin-top: 16px; font-size: 1.15rem; max-w
 .grid .card:nth-child(4) { animation-delay: 0.22s; }
 .grid .card:nth-child(5) { animation-delay: 0.28s; }
 .grid .card:nth-child(6) { animation-delay: 0.34s; }
+
+/* Footer */
+.site-footer {
+  margin-top: 72px; border-top: 1px solid var(--border); padding: 48px 0 32px;
+}
+.footer-inner {
+  max-width: 1180px; margin: 0 auto; padding: 0 24px;
+  display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;
+}
+.footer-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 1rem; font-weight: 700; color: var(--navy);
+}
+.footer-desc { color: var(--muted); font-size: 0.95rem; max-width: 520px; line-height: 1.6; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; }
+.footer-links a {
+  color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--orange); }
+.footer-copy { color: var(--muted); font-size: 0.82rem; }
+[data-theme="dark"] .site-footer { border-top-color: var(--border); }

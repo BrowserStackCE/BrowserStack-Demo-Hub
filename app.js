@@ -68,7 +68,7 @@ function loadYouTubeAPI() {
   return ytApiPromise;
 }
 
-function setupAutoAdvance(nextHash) {
+function setupAutoAdvance(nextHash, currentVid) {
   const iframe = document.getElementById("yt-player");
   if (!iframe) return;
   loadYouTubeAPI().then(() => {
@@ -78,7 +78,17 @@ function setupAutoAdvance(nextHash) {
       events: {
         onStateChange: (e) => {
           if (e.data === window.YT.PlayerState.ENDED && nextHash) {
+            // Navigate to next video — render() will re-render the playlist with correct highlight
             location.hash = nextHash;
+          }
+          if (e.data === window.YT.PlayerState.PLAYING) {
+            // Ensure the correct playlist item is highlighted (handles edge cases)
+            document.querySelectorAll(".pl-item").forEach((el) => {
+              const isActive = el.dataset.vid === currentVid;
+              el.classList.toggle("active", isActive);
+              const nowBadge = el.querySelector(".pl-now");
+              if (nowBadge) nowBadge.style.display = isActive ? "" : "none";
+            });
           }
         },
       },
@@ -96,6 +106,8 @@ function thumbUrl(video) {
 function render() {
   const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
   const parts = hash.split("/").filter(Boolean);
+  const isHome = parts.length === 0 || parts[0] !== "product";
+  document.querySelector(".navbar").classList.toggle("is-home", isHome);
   if (parts[0] === "product" && parts[2] === "video") {
     renderVideo(parts[1], parts[3]);
   } else if (parts[0] === "product") {
@@ -137,7 +149,23 @@ function renderHome() {
       </div>
     </div>
     <h2 class="section-label fade">Choose a product</h2>
-    <div class="grid fade">${cards}</div>`;
+    <div class="grid fade">${cards}</div>
+    <footer class="site-footer fade">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="icons/browserstack-icon.svg" alt="BrowserStack" width="28" height="28" />
+          <span>BrowserStack Demo Hub</span>
+        </div>
+        <p class="footer-desc">Your one-stop destination for BrowserStack product walkthroughs, onboarding videos, and documentation.</p>
+        <div class="footer-links">
+          <a href="https://www.browserstack.com/docs" target="_blank" rel="noopener">Documentation</a>
+          <a href="https://www.browserstack.com/contact" target="_blank" rel="noopener">Support</a>
+          <a href="https://www.browserstack.com/blog" target="_blank" rel="noopener">Blog</a>
+          <a href="https://www.browserstack.com/pricing" target="_blank" rel="noopener">Pricing</a>
+        </div>
+        <p class="footer-copy">&copy; ${new Date().getFullYear()} BrowserStack. All rights reserved.</p>
+      </div>
+    </footer>`;
 }
 
 function renderDashboard(pid) {
@@ -187,7 +215,7 @@ function renderVideo(pid, vid) {
   const playlist = p.videos
     .map(
       (item, i) => `
-      <li class="pl-item ${item.id === v.id ? "active" : ""}" onclick="location.hash='#/product/${p.id}/video/${item.id}'">
+      <li class="pl-item ${item.id === v.id ? "active" : ""}" data-vid="${item.id}" onclick="location.hash='#/product/${p.id}/video/${item.id}'">
         <span class="pl-index">${i + 1}</span>
         <img class="pl-thumb" src="${thumbUrl(item)}" alt="" onerror="this.classList.add('noimg')" />
         <span class="pl-meta">
@@ -231,7 +259,7 @@ function renderVideo(pid, vid) {
     </div>`;
   // Auto-advance to the next video when this one ends.
   const next = p.videos[idx + 1];
-  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null);
+  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null, v.id);
   // Keep the active playlist item in view.
   const active = document.querySelector(".pl-item.active");
   if (active) active.scrollIntoView({ block: "nearest" });
