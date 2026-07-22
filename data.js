@@ -13,11 +13,23 @@
 // Example:  youtubeId: "GX9x62kFsVU", playlistId: "PLxxxxxxxxxxxxxxxx",
 const PRODUCTS = [
   {
+    id: "live",
+    name: "Live",
+    tagline: "Interactive cross-browser testing on real devices",
+    icon: "",
+    iconSvg: "icons/icon-14-live.svg",
+    videos: [
+      { id: "live-1", title: "Getting Started with BrowserStack Live", youtubeId: "", duration: "",
+        description: "Learn how to start an interactive browser testing session on real browsers and devices using BrowserStack Live.",
+        docs: [], links: [] },
+    ],
+  },
+  {
     id: "Low-Code-Automation",
     name: "Low Code Automation",
     tagline: "Feature demos for Low Code Automation",
     icon: "",
-    iconSvg: "lca-icon.svg",
+    iconSvg: "icons/icon-04-lca.svg",
     videos: [
       { id: "lc-1", title: "1.1 Get Started | Record Your First Test on Low Code Automation", youtubeId: "https://www.youtube.com/watch?v=x0bHlVV2psU&list=PLN1KfW8k2lAk", duration: "05:11",
         description: "Start your Low Code Automation journey by recording a test directly in your browser. The intuitive test recorder turns every click, input, and navigation into an automated step in real time, with no coding or infrastructure setup, so QA testers, developers, and citizen testers can build their first automated test in minutes.",
@@ -75,6 +87,7 @@ const PRODUCTS = [
         docs: [{label: "Export Test Cases using API", url: "https://www.browserstack.com/docs/low-code-automation/advanced-use-cases/export-tests"}], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
     ],
   },
+  
   {
     id: "analytics",
     name: "Analytics Suite",
@@ -107,23 +120,7 @@ const PRODUCTS = [
       },
     ],
   },
-  {
-    id: "crm",
-    name: "CRM Platform",
-    tagline: "Relationships, organized",
-    icon: "🤝",
-    videos: [
-      {
-        id: "crm-1",
-        title: "CRM Onboarding Walkthrough",
-        youtubeId: "",
-        description:
-          "Set up your pipeline, import contacts, and configure your sales stages in minutes.",
-        docs: [{ label: "Setup Guide", url: "https://example.com/crm/setup" }],
-        links: [{ label: "Integrations", url: "https://example.com/crm/integrations" }],
-      },
-    ],
-  },
+  
   {
     id: "automation",
     name: "Automation Engine",

@@ -123,7 +123,7 @@ function renderHome() {
       <div class="hero-orb orb-3"></div>
       <div class="hero-glass">
         <div class="hero-logo-row">
-          <img src="browserstack-icon.svg" alt="BrowserStack" class="hero-logo" />
+          <img src="icons/browserstack-icon.svg" alt="BrowserStack" class="hero-logo" />
           <span class="hero-brand">BrowserStack</span>
         </div>
         <h1 class="hero-title">Welcome to the <span class="hero-grad">Demo Hub</span></h1>
