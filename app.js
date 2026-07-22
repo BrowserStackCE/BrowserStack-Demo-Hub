@@ -113,16 +113,30 @@ function renderHome() {
       <div class="icon">${p.iconSvg ? `<img src="${p.iconSvg}" alt="${esc(p.name)}" style="width:32px;height:32px;object-fit:contain;" />` : p.icon}</div>
       <h3>${esc(p.name)}</h3>
       <p>${esc(p.tagline)}</p>
-      <div class="count">${p.videos.length} video${p.videos.length === 1 ? "" : "s"}</div>
+      <div class="count">${p.videos.length} video${p.videos.length === 1 ? "" : "s"} &rarr;</div>
     </div>`
   ).join("");
   app.innerHTML = `
-    <header class="hero fade">
-      <h1>Your BrowserStack Demo Hub</h1><h2> Explore, Learn, Launch</h2>
-      <p>Explore interactive demos of BrowserStack's powerful testing features, all in one place. Whether you're new or looking to deepen your product knowledge, this hub helps you quickly understand, experience, and onboard with BrowserStack.
-
-</p>
-    </header>
+    <div class="home-hero-wrap fade">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-glass">
+        <div class="hero-logo-row">
+          <img src="browserstack-icon.svg" alt="BrowserStack" class="hero-logo" />
+          <span class="hero-brand">BrowserStack</span>
+        </div>
+        <h1 class="hero-title">Welcome to the <span class="hero-grad">Demo Hub</span></h1>
+        <p class="hero-sub">Explore, Learn, Launch</p>
+        <p class="hero-desc">Explore interactive demos of BrowserStack's powerful testing features, all in one place. Whether you're new or looking to deepen your product knowledge, this hub helps you quickly understand, experience, and onboard with BrowserStack.</p>
+        <div class="hero-chips">
+          <span class="chip">🚀 Onboarding</span>
+          <span class="chip">🎬 Video Walkthroughs</span>
+          <span class="chip">📚 Documentation</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-label fade">Choose a product</h2>
     <div class="grid fade">${cards}</div>`;
 }
 

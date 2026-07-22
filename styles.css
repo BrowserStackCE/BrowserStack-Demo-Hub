@@ -76,6 +76,65 @@ header.hero h1 .grad {
 }
 header.hero p { color: var(--muted); margin-top: 16px; font-size: 1.15rem; max-width: 620px; margin-inline: auto; }
 
+/* Home hero — liquid glass */
+.home-hero-wrap {
+  position: relative; margin-bottom: 52px; border-radius: 28px; overflow: hidden;
+  padding: 2px; /* border gradient trick */
+  background: linear-gradient(135deg, rgba(44,116,246,0.25), rgba(111,123,255,0.15), rgba(44,116,246,0.1));
+}
+.hero-orb {
+  position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; z-index: 0;
+  animation: orbdrift 12s ease-in-out infinite alternate;
+}
+.orb-1 { width: 420px; height: 420px; top: -120px; left: -80px; background: radial-gradient(circle, rgba(44,116,246,0.22), transparent 70%); animation-delay: 0s; }
+.orb-2 { width: 320px; height: 320px; top: -60px; right: -60px; background: radial-gradient(circle, rgba(111,123,255,0.18), transparent 70%); animation-delay: -4s; }
+.orb-3 { width: 260px; height: 260px; bottom: -80px; left: 40%; background: radial-gradient(circle, rgba(44,116,246,0.14), transparent 70%); animation-delay: -8s; }
+@keyframes orbdrift { from { transform: translate(0,0) scale(1); } to { transform: translate(20px, -20px) scale(1.08); } }
+.hero-glass {
+  position: relative; z-index: 1;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 8px 40px rgba(44,116,246,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+  padding: 52px 56px 48px;
+  text-align: center;
+}
+.hero-logo-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 24px; }
+.hero-logo { width: 36px; height: 36px; }
+.hero-brand { font-size: 1.05rem; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.04em;
+  color: var(--navy); line-height: 1.05; margin-bottom: 10px;
+}
+.hero-grad {
+  background: linear-gradient(120deg, var(--orange), var(--brand));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: 1.25rem; font-weight: 600; color: var(--orange); letter-spacing: 0.01em; margin-bottom: 18px;
+}
+.hero-desc {
+  color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 640px; margin: 0 auto 28px;
+}
+.hero-chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.chip {
+  font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: 100px;
+  background: rgba(44,116,246,0.08); border: 1px solid rgba(44,116,246,0.18);
+  color: var(--ink); letter-spacing: 0.01em;
+  transition: background 0.25s, transform 0.25s;
+}
+.chip:hover { background: rgba(44,116,246,0.15); transform: translateY(-1px); }
+.section-label {
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted); margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .hero-glass { padding: 36px 24px 32px; }
+  .hero-title { font-size: 2.2rem; }
+}
+
 /* Breadcrumb */
 .crumbs { display: flex; gap: 8px; align-items: center; margin-bottom: 28px; font-size: 0.92rem; }
 .crumbs a { color: var(--muted); cursor: pointer; text-decoration: none; transition: color 0.2s; }
