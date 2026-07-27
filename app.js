@@ -121,12 +121,12 @@ function thumbUrl(video) {
 }
 
 function render(forceAutoplay) {
-  if (typeof gtag === 'function') {
+  const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
+    if (typeof gtag === 'function') {
     gtag('config', 'G-CZKRW5KJRS', { 
       page_path: location.pathname + location.search + location.hash
     });
   }
-  const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
   const parts = hash.split("/").filter(Boolean);
   const isHome = parts.length === 0 || parts[0] !== "product";
   document.querySelector(".navbar").classList.toggle("is-home", isHome);
