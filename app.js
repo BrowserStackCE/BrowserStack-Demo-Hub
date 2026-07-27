@@ -40,13 +40,18 @@ function embedUrl(video, opts = {}) {
     base.enablejsapi = "1";
     base.origin = location.origin;
   }
+  if (opts.autoplay) {
+    base.autoplay = "1";
+  }
   const params = new URLSearchParams(base);
   let path;
   if (parsed.videoId) {
     path = parsed.videoId;
-    if (playlistId) params.set("list", playlistId); // play this video within the (unlisted) playlist
-  } else if (playlistId) {
-    // Playlist-only: use the playlist embed endpoint
+    // Do NOT add list= here — it causes YouTube to handle playlist navigation internally,
+    // which prevents the ENDED event from firing for our auto-advance logic.
+    // We manage playlist navigation ourselves via setupAutoAdvance.
+  } else if (playlistId && !parsed.videoId) {
+    // Playlist-only (no specific video): use the playlist embed endpoint.
     return `https://www.youtube-nocookie.com/embed/videoseries?${params.toString()}&list=${encodeURIComponent(playlistId)}`;
   } else {
     path = "";
@@ -54,44 +59,56 @@ function embedUrl(video, opts = {}) {
   return `https://www.youtube-nocookie.com/embed/${path}?${params.toString()}`;
 }
 
-// Load the YouTube IFrame API once and auto-advance to `nextHash` when the video ends.
-let ytApiPromise = null;
-function loadYouTubeAPI() {
-  if (window.YT && window.YT.Player) return Promise.resolve();
-  if (ytApiPromise) return ytApiPromise;
-  ytApiPromise = new Promise((resolve) => {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    window.onYouTubeIframeAPIReady = () => resolve();
-    document.head.appendChild(tag);
-  });
-  return ytApiPromise;
+// Auto-advance: load YT IFrame API once, attach player after iframe loads.
+let _ytReady = false;
+let _ytReadyCbs = [];
+function onYouTubeIframeAPIReady() {
+  _ytReady = true;
+  _ytReadyCbs.forEach(fn => fn());
+  _ytReadyCbs = [];
+}
+function whenYTReady(fn) {
+  if (_ytReady) { fn(); return; }
+  _ytReadyCbs.push(fn);
+  if (!document.querySelector('script[src*="iframe_api"]')) {
+    const s = document.createElement("script");
+    s.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(s);
+  }
 }
 
-function setupAutoAdvance(nextHash, currentVid) {
-  const iframe = document.getElementById("yt-player");
-  if (!iframe) return;
-  loadYouTubeAPI().then(() => {
-    // Re-check: user may have navigated away before the API loaded.
-    if (document.getElementById("yt-player") !== iframe) return;
-    new window.YT.Player("yt-player", {
+let _currentPlayer = null;
+let _autoplayNext = false; // set true when auto-advancing so next video autoplays
+
+function setupAutoAdvance(nextHash, shouldAutoplay) {
+  // Destroy previous player instance cleanly.
+  if (_currentPlayer) {
+    try { _currentPlayer.destroy(); } catch(e) {}
+    _currentPlayer = null;
+  }
+
+  whenYTReady(() => {
+    const iframe = document.getElementById("yt-player");
+    if (!iframe) return; // user navigated away
+    _currentPlayer = new YT.Player(iframe, {
       events: {
-        onStateChange: (e) => {
-          if (e.data === window.YT.PlayerState.ENDED && nextHash) {
-            // Navigate to next video — render() will re-render the playlist with correct highlight
-            location.hash = nextHash;
-          }
-          if (e.data === window.YT.PlayerState.PLAYING) {
-            // Ensure the correct playlist item is highlighted (handles edge cases)
-            document.querySelectorAll(".pl-item").forEach((el) => {
-              const isActive = el.dataset.vid === currentVid;
-              el.classList.toggle("active", isActive);
-              const nowBadge = el.querySelector(".pl-now");
-              if (nowBadge) nowBadge.style.display = isActive ? "" : "none";
-            });
+        onReady: (e) => {
+          // If this render was triggered by auto-advance, start playing immediately.
+          if (shouldAutoplay) {
+            try { e.target.playVideo(); } catch(err) {}
           }
         },
-      },
+        onStateChange: (e) => {
+          if (e.data === YT.PlayerState.ENDED && nextHash) {
+            if (location.hash === nextHash) {
+              render(true); // pass autoplay flag
+            } else {
+              _autoplayNext = true;
+              location.hash = nextHash;
+            }
+          }
+        }
+      }
     });
   });
 }
@@ -103,13 +120,13 @@ function thumbUrl(video) {
     : "https://img.youtube.com/vi/videoseries/hqdefault.jpg";
 }
 
-function render() {
+function render(forceAutoplay) {
   const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
   const parts = hash.split("/").filter(Boolean);
   const isHome = parts.length === 0 || parts[0] !== "product";
   document.querySelector(".navbar").classList.toggle("is-home", isHome);
   if (parts[0] === "product" && parts[2] === "video") {
-    renderVideo(parts[1], parts[3]);
+    renderVideo(parts[1], parts[3], forceAutoplay || _autoplayNext);
   } else if (parts[0] === "product") {
     renderDashboard(parts[1]);
   } else {
@@ -125,9 +142,10 @@ function renderHome() {
       <div class="icon">${p.iconSvg ? `<img src="${p.iconSvg}" alt="${esc(p.name)}" style="width:32px;height:32px;object-fit:contain;" />` : p.icon}</div>
       <h3>${esc(p.name)}</h3>
       <p>${esc(p.tagline)}</p>
-      <div class="count">${p.videos.length} video${p.videos.length === 1 ? "" : "s"} &rarr;</div>
+      ${p.videos && p.videos.length > 0 ? `<div class="count">${p.videos.length} video${p.videos.length === 1 ? "" : "s"} &rarr;</div>` : ""}
     </div>`
   ).join("");
+  
   app.innerHTML = `
     <div class="home-hero-wrap fade">
       <div class="hero-orb orb-1"></div>
@@ -197,7 +215,7 @@ function renderDashboard(pid) {
     <div class="grid fade">${cards}</div>`;
 }
 
-function renderVideo(pid, vid) {
+function renderVideo(pid, vid, autoplay) {
   const p = PRODUCTS.find((x) => x.id === pid);
   const idx = p ? p.videos.findIndex((x) => x.id === vid) : -1;
   const v = idx >= 0 ? p.videos[idx] : null;
@@ -236,7 +254,7 @@ function renderVideo(pid, vid) {
     </div>
     <div class="detail fade">
       <div class="glass player-wrap">
-        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="glass panel desc-panel">
         <h2>${esc(v.title)}</h2>
@@ -257,9 +275,11 @@ function renderVideo(pid, vid) {
         </div>
       </div>
     </div>`;
-  // Auto-advance to the next video when this one ends.
+  // Consume the autoplay flag (reset after use so manual navigation doesn't autoplay).
+  _autoplayNext = false;
+  // Auto-advance to the next video when this one ends; pass autoplay flag to start playing.
   const next = p.videos[idx + 1];
-  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null, v.id);
+  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null, !!autoplay);
   // Keep the active playlist item in view.
   const active = document.querySelector(".pl-item.active");
   if (active) active.scrollIntoView({ block: "nearest" });

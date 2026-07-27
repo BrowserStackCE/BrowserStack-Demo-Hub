@@ -419,7 +419,7 @@ id: "app-automate",
       { id: "lc-3", title: "1.3 Get Started | Create Test Suites & Run Cross-Browser Builds", youtubeId: "https://www.youtube.com/watch?v=8ttgxw3dpX4&list=PLN1KfW8k2lAk", duration: "02:08",
         description: "Create your test suite and replay recorded tests on real desktop and mobile browsers in the BrowserStack cloud. Run the same flow across multiple browser and OS combinations to confirm consistent behaviour everywhere, while intelligent wait timeouts automatically reduce flakiness with zero infrastructure to manage.",
         docs: [{ label: "Perform Cross Browser Testing", url: "https://www.browserstack.com/docs/low-code-automation/type-of-testing/cross-browser-testing" }], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
-      { id: "lc-4", title: "1.4 Get Started | Debug Tests with Video, Screenshots & Logs", youtubeId: "https://www.youtube.com/watch?v=tVD4XdkpjSI&list=PLN1KfW8k2lAk&index=4", duration: "04:30",
+      { id: "lc-4", title: "1.4 Get Started | Debug Tests with Video, Screenshots & Logs", youtubeId: "https://www.youtube.com/watch?v=tVD4XdkpjSI&list=PLN1KfW8k2lAk", duration: "04:30",
         description: "Diagnose failures fast using rich debugging data. Step through each action with screenshots, video, and logs from the run to understand exactly what happened, and monitor the ongoing health of your tests.",
         docs: [{label:"Test Reporting and Debugging", url:"https://www.browserstack.com/docs/low-code-automation/test-debugging/overview"}], links: [{label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta"}] },
       { id: "lc-5", title: "1.5 Get Started | Test Internal & Staging Environments with BrowserStack Local", youtubeId: "https://www.youtube.com/watch?v=BDrDstNDnv0&list=PLN1KfW8k2lAk", duration: "03:55",
@@ -651,4 +651,20 @@ id: "app-automate",
         docs: [], links: [] },
     ],
   },
+
+
+{
+    id: "test-companion",
+    name: "Test Companion",
+    tagline: "Agentic AI for test automation",
+    icon: "",
+    iconSvg: "icons/icon-22.svg",
+    videos: [
+      { id: "testcompanion-1", title: "Introducing Test Companion", youtubeId: "", duration: "04:29",
+        description: "Test Companion helps SDETs author, execute, debug, and maintain tests 4X faster with agentic AI right inside the IDE they already use. Works with any automation framework to test mobile and web applications.",
+        docs: [{label: "Test Companion Docs", url: "https://www.browserstack.com/docs/test-companion/overview"}], links: [{label: "Download the extention here", url:"https://www.browserstack.com/docs/test-companion/get-started/installation-guide"}] },
+    ],
+  },
+
+
 ];
