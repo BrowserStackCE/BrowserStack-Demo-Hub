@@ -19,8 +19,6 @@ const PRODUCTS = [
     icon: "📺",
     // iconSvg: "icons/icon-22.svg",
     videos: [
-    ]
-  },
-
-
-];
+  ],
+}
+]
