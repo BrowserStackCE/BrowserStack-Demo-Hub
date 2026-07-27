@@ -123,6 +123,9 @@ function thumbUrl(video) {
 function render(forceAutoplay) {
   const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
     if (typeof gtag === 'function') {
+      const basePath = location.pathname.replace(/\/$/, '');
+    const cleanHash = location.hash.replace(/^#\/?/, '');
+    const customPath = basePath + (cleanHash ? '/' + cleanHash : '/');
     gtag('config', 'G-CZKRW5KJRS', { 
       page_path: location.pathname + location.search + location.hash
     });
