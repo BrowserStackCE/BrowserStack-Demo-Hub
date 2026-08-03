@@ -41,9 +41,8 @@ function embedUrl(video, opts = {}) {
     base.enablejsapi = "1";
     base.origin = location.origin;
   }
-  if (opts.autoplay) {
-    base.autoplay = "0";
-  }
+  // Never autoplay — user must click play for YouTube to count the view.
+  base.autoplay = "0";
   // widget_referrer tells YouTube Analytics the URL of the page hosting the embed,
   // so each product/video page appears as a distinct referrer in YouTube Studio.
   base.widget_referrer = opts.widgetReferrer || location.href;
@@ -82,9 +81,8 @@ function whenYTReady(fn) {
 }
 
 let _currentPlayer = null;
-let _autoplayNext = false; // set true when auto-advancing so next video autoplays
 
-function setupAutoAdvance(nextHash, shouldAutoplay) {
+function setupAutoAdvance(nextHash) {
   // Destroy previous player instance cleanly.
   if (_currentPlayer) {
     try { _currentPlayer.destroy(); } catch(e) {}
@@ -96,20 +94,12 @@ function setupAutoAdvance(nextHash, shouldAutoplay) {
     if (!iframe) return; // user navigated away
     _currentPlayer = new YT.Player(iframe, {
       events: {
-        onReady: (e) => {
-          // If this render was triggered by auto-advance, start playing immediately.
-          if (shouldAutoplay) {
-            try { e.target.playVideo(); } catch(err) {}
-          }
+        onReady: (_e) => {
+          // Autoplay is disabled — user must click play for YouTube to count the view.
         },
         onStateChange: (e) => {
           if (e.data === YT.PlayerState.ENDED && nextHash) {
-            if (location.hash === nextHash) {
-              render(true); // pass autoplay flag
-            } else {
-              _autoplayNext = true;
-              location.hash = nextHash;
-            }
+            location.hash = nextHash;
           }
         }
       }
@@ -124,13 +114,13 @@ function thumbUrl(video) {
     : "https://img.youtube.com/vi/videoseries/hqdefault.jpg";
 }
 
-function render(forceAutoplay) {
+function render() {
   const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
   const parts = hash.split("/").filter(Boolean);
   const isHome = parts.length === 0 || parts[0] !== "product";
   document.querySelector(".navbar").classList.toggle("is-home", isHome);
   if (parts[0] === "product" && parts[2] === "video") {
-    renderVideo(parts[1], parts[3], forceAutoplay || _autoplayNext);
+    renderVideo(parts[1], parts[3]);
   } else if (parts[0] === "product") {
     renderDashboard(parts[1]);
   } else {
@@ -235,7 +225,7 @@ function renderDashboard(pid) {
     <div class="grid fade">${cards}</div>`;
 }
 
-function renderVideo(pid, vid, autoplay) {
+function renderVideo(pid, vid) {
   const p = PRODUCTS.find((x) => x.id === pid);
   const idx = p ? p.videos.findIndex((x) => x.id === vid) : -1;
   const v = idx >= 0 ? p.videos[idx] : null;
@@ -282,7 +272,7 @@ function renderVideo(pid, vid, autoplay) {
     </div>
     <div class="detail fade">
       <div class="glass player-wrap">
-        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext, widgetReferrer: location.href })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
+        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, widgetReferrer: location.href })}" title="${esc(v.title)}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
       </div>
       <div class="glass panel desc-panel">
         <h2>${esc(v.title)}</h2>
@@ -303,11 +293,9 @@ function renderVideo(pid, vid, autoplay) {
         </div>
       </div>
     </div>`;
-  // Consume the autoplay flag (reset after use so manual navigation doesn't autoplay).
-  _autoplayNext = false;
-  // Auto-advance to the next video when this one ends; pass autoplay flag to start playing.
+  // Auto-advance to the next video when this one ends (no autoplay — user must click play).
   const next = p.videos[idx + 1];
-  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null, !!autoplay);
+  setupAutoAdvance(next ? `#/product/${p.id}/video/${next.id}` : null);
   // Keep the active playlist item in view.
   const active = document.querySelector(".pl-item.active");
   if (active) active.scrollIntoView({ block: "nearest" });
