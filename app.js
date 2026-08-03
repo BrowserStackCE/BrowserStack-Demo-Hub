@@ -42,7 +42,7 @@ function embedUrl(video, opts = {}) {
     base.origin = location.origin;
   }
   if (opts.autoplay) {
-    base.autoplay = "1";
+    base.autoplay = "0";
   }
   // widget_referrer tells YouTube Analytics the URL of the page hosting the embed,
   // so each product/video page appears as a distinct referrer in YouTube Studio.
