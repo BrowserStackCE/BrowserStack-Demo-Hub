@@ -32,6 +32,7 @@ function parseYouTube(input) {
 
 // Build a privacy-friendly embed URL that supports single videos AND (unlisted) playlists.
 // Pass { jsapi: true } to enable the IFrame API (needed for auto-advance).
+// Pass { widgetReferrer: location.href } to tell YouTube Analytics which page the embed is on.
 function embedUrl(video, opts = {}) {
   const parsed = parseYouTube(video.youtubeId);
   const playlistId = video.playlistId || parsed.playlistId;
@@ -43,6 +44,9 @@ function embedUrl(video, opts = {}) {
   if (opts.autoplay) {
     base.autoplay = "1";
   }
+  // widget_referrer tells YouTube Analytics the URL of the page hosting the embed,
+  // so each product/video page appears as a distinct referrer in YouTube Studio.
+  base.widget_referrer = opts.widgetReferrer || location.href;
   const params = new URLSearchParams(base);
   let path;
   if (parsed.videoId) {
@@ -278,7 +282,7 @@ function renderVideo(pid, vid, autoplay) {
     </div>
     <div class="detail fade">
       <div class="glass player-wrap">
-        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
+        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext, widgetReferrer: location.href })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
       </div>
       <div class="glass panel desc-panel">
         <h2>${esc(v.title)}</h2>
