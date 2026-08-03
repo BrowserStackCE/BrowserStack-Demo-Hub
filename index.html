@@ -8,18 +8,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-CZKRW5KJRS', {
-      page_path: location.pathname + location.hash
-    });
-
-    // Track hash-based navigation as virtual pageviews
-    window.addEventListener('hashchange', function() {
-      gtag('event', 'page_view', {
-        page_path: location.pathname + location.hash,
-        page_location: location.href,
-        page_title: document.title
-      });
-    });
+    gtag('config', 'G-CZKRW5KJRS', { send_page_view: false });
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -122,14 +122,6 @@ function thumbUrl(video) {
 
 function render(forceAutoplay) {
   const hash = location.hash.slice(1); // e.g. /product/crm/video/crm-1
-    if (typeof gtag === 'function') {
-      const basePath = location.pathname.replace(/\/$/, '');
-    const cleanHash = location.hash.replace(/^#\/?/, '');
-    const customPath = basePath + (cleanHash ? '/' + cleanHash : '/');
-    gtag('config', 'G-CZKRW5KJRS', { 
-      page_path: location.pathname + location.search + location.hash
-    });
-  }
   const parts = hash.split("/").filter(Boolean);
   const isHome = parts.length === 0 || parts[0] !== "product";
   document.querySelector(".navbar").classList.toggle("is-home", isHome);
@@ -144,6 +136,14 @@ function render(forceAutoplay) {
 }
 
 function renderHome() {
+  document.title = 'BrowserStack Demo Hub';
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_path: location.pathname + location.search + '/#/',
+      page_location: location.href
+    });
+  }
   const cards = PRODUCTS.map(
     (p) => `
     <div class="glass card" onclick="location.hash='#/product/${p.id}'">
@@ -197,6 +197,14 @@ function renderHome() {
 function renderDashboard(pid) {
   const p = PRODUCTS.find((x) => x.id === pid);
   if (!p) return renderHome();
+  document.title = p.name + ' – BrowserStack Demo Hub';
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_path: location.pathname + location.search + '/#/product/' + pid,
+      page_location: location.href
+    });
+  }
   const cards = p.videos.map(
     (v) => `
     <div class="glass card vthumb" onclick="location.hash='#/product/${p.id}/video/${v.id}'">
@@ -228,6 +236,14 @@ function renderVideo(pid, vid, autoplay) {
   const idx = p ? p.videos.findIndex((x) => x.id === vid) : -1;
   const v = idx >= 0 ? p.videos[idx] : null;
   if (!v) return renderHome();
+  document.title = v.title + ' – BrowserStack Demo Hub';
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_path: location.pathname + location.search + '/#/product/' + pid + '/video/' + vid,
+      page_location: location.href
+    });
+  }
   // Accepts both plain URL strings and { label, url } objects.
   function renderLink(item, emoji) {
     const url = typeof item === "string" ? item : item.url;
