@@ -278,7 +278,7 @@ function renderVideo(pid, vid, autoplay) {
     </div>
     <div class="detail fade">
       <div class="glass player-wrap">
-        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, autoplay: _autoplayNext })}" title="${esc(v.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
       </div>
       <div class="glass panel desc-panel">
         <h2>${esc(v.title)}</h2>
