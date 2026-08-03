@@ -52,11 +52,11 @@ function embedUrl(video, opts = {}) {
     // We manage playlist navigation ourselves via setupAutoAdvance.
   } else if (playlistId && !parsed.videoId) {
     // Playlist-only (no specific video): use the playlist embed endpoint.
-    return `https://www.youtube-nocookie.com/embed/videoseries?${params.toString()}&list=${encodeURIComponent(playlistId)}`;
+    return `https://www.youtube.com/embed/videoseries?${params.toString()}&list=${encodeURIComponent(playlistId)}`;
   } else {
     path = "";
   }
-  return `https://www.youtube-nocookie.com/embed/${path}?${params.toString()}`;
+  return `https://www.youtube.com/embed/${path}?${params.toString()}`;
 }
 
 // Auto-advance: load YT IFrame API once, attach player after iframe loads.
