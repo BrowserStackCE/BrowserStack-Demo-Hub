@@ -960,7 +960,7 @@ const PRODUCTS = [
       {
         id: "apppercy-9", title: "App Percy - Run on your own Devices", youtubeId: "https://youtu.be/dYIYVl134CI", duration: "03:59",
         description: "Understand how to execute App Percy visual tests leveraging your locally hosted or in-house physical mobile devices.",
-        docs: [{ label: "Run on your own Devices", url: "https://www.browserstack.com/docs/app-percy" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Run on your own Devices", url: "https://www.browserstack.com/docs/app-percy/advanced/byos" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "apppercy-10", title: "App Percy - Baseline Management for Git ", youtubeId: "https://youtu.be/wCC1Aju2Hmw", duration: "06:29",
@@ -987,29 +987,29 @@ const PRODUCTS = [
         description: "Discover best practices and strategies to efficiently manage, update, and approve visual baselines for your mobile apps using Visual Git",
         docs: [{ label: "Baseline Management for Visual Git", url: "https://www.browserstack.com/docs/app-percy/visual-testing-workflows/baseline-management/visual-git" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
-      // {
-      //   id: "apppercy-15", title: "BrowserStack AppPercy Integration", youtubeId: "", duration: "03:18",
-      //   description: "Learn how to natively integrate App Percy visual testing directly into your existing BrowserStack App Automate test scripts.",
-      //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
-      // {
-      //   id: "apppercy-16", title: "FullPage Screenshots in BrowserStack App Percy", youtubeId: "", duration: "01:51",
-      //   description: "Learn how to capture and test full-length, scrollable page screenshots within your native mobile applications.",
-      //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
-      // {
-      //   id: "apppercy-17", title: "Github Integration with BrowserStack App Percy", youtubeId: "", duration: "02:48",
-      //   description: "Integrate App Percy with GitHub to automatically post visual review statuses and build insights directly on your pull requests.",
-      //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
-      // {
-      //   id: "apppercy-18", title: "Ignoring Dynamic Elements in App Percy", youtubeId: "", duration: "02:12",
+      {
+        id: "apppercy-15", title: "App Percy - Integration with App Automate", youtubeId: "https://youtu.be/l6Nwz92aFlQ", duration: "03:19",
+        description: "Learn how to natively integrate App Percy visual testing directly into your existing BrowserStack App Automate test scripts.",
+        docs: [{ label: "Integration with App Automate", url: "https://www.browserstack.com/docs/app-percy/appium/get-started?fw-lang=java" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "apppercy-16", title: "App Percy - Full Page Screenshots", youtubeId: "https://youtu.be/0N6Q4d2F-MY", duration: "01:52",
+        description: "Learn how to capture and test full-length, scrollable page screenshots within your native mobile applications.",
+        docs: [{ label: "Full Page Screenshots", url: "https://www.browserstack.com/docs/app-percy/advanced/full-page-ss" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "apppercy-17", title: "App Percy - Integrate with Github", youtubeId: "https://youtu.be/ELHT2anvXwU", duration: "02:49",
+        description: "Integrate App Percy with GitHub to automatically post visual review statuses and build insights directly on your pull requests.",
+        docs: [{ label: "Integrate with Github", url: "https://www.browserstack.com/docs/app-percy/bug-tracking/github" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "apppercy-18", title: "App Percy - Ignoring Regions", youtubeId: "https://youtu.be/hmYTpskpSGk", duration: "01:44",
+        description: "Learn how to explicitly draw ignore regions to exclude specific UI areas from visual comparisons during test runs.",
+        docs: [{ label: "Ignoring Regions", url: "https://www.browserstack.com/docs/app-percy/set-regions/overview" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      //  {
+      //   id: "apppercy-19", title: "Ignoring Dynamic Elements in App Percy", youtubeId: "", duration: "02:12",
       //   description: "See how to automatically or manually ignore dynamic content like timestamps, shifting data, or ads to prevent false failures.",
-      //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
-      // {
-      //   id: "apppercy-19", title: "Ignoring regions in BrowserStack App Percy", youtubeId: "", duration: "01:43",
-      //   description: "Learn how to explicitly draw ignore regions to exclude specific UI areas from visual comparisons during test runs.",
       //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       // },
     ],
