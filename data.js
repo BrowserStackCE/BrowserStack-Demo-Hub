@@ -1009,11 +1009,11 @@ const PRODUCTS = [
         description: "Learn how to explicitly draw ignore regions to exclude specific UI areas from visual comparisons during test runs.",
         docs: [{ label: "Ignoring Regions", url: "https://www.browserstack.com/docs/app-percy/set-regions/overview" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
-      //  {
-      //   id: "apppercy-19", title: "Ignoring Dynamic Elements in App Percy", youtubeId: "", duration: "02:12",
-      //   description: "See how to automatically or manually ignore dynamic content like timestamps, shifting data, or ads to prevent false failures.",
-      //   docs: [{ label: "Integrate with SDK", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
+       {
+        id: "apppercy-19", title: "Ignoring Dynamic Elements in App Percy", youtubeId: "https://youtu.be/DLaVlprQD5c", duration: "02:12",
+        description: "See how to automatically or manually ignore dynamic content like timestamps, shifting data, or ads to prevent false failures.",
+        docs: [{ label: "Ignore Dynamic Elements", url: "https://www.browserstack.com/docs/app-percy/stabilize-screenshots/ignore-dynamic-elements" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
     ],
   },
   {
