@@ -89,6 +89,7 @@ const PRODUCTS = [
         description: "Learn how to test voice search, voice notes, and other audio input functionalities.",
         docs: [{label:"Audio Injection on Android Devices", url:"https://www.browserstack.com/docs/live/media/audio-injection-android"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
+      
       {
         id: "live-15", title: "BrowserStack Live - Testing Google Pay Workflows on Android-Chrome Devices", youtubeId: "https://youtu.be/GeqGzSYkIvY", duration: "3:09",
         description: "See how to test Google Pay integrations and payment flows on real Android devices using Chrome.",
@@ -113,6 +114,16 @@ const PRODUCTS = [
         id: "live-19", title: "BrowserStack Live - Test Across Resolutions", youtubeId: "https://youtu.be/wr6pq5_xYZo", duration: "2:16",
         description: "See how to verify your website's responsiveness by testing across various screen resolutions.",
         docs: [{label:"Test Across Resolutions", url:"https://www.browserstack.com/docs/live/responsive-design-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "live-20", title: "BrowserStack Live - Test Websites Behind Proxies", youtubeId: "https://youtu.be/ACx1PSgGNlM", duration: "2:24",
+        description: "Learn how to configure proxy settings to securely access and test internal websites hosted behind corporate proxies.",
+        docs: [{label:"Test Behind Proxies", url:"https://www.browserstack.com/docs/live/local-testing/behind-proxy"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+       {
+        id: "live-21", title: "BrowserStack Live - Test Across different IP Geolocations", youtubeId: "https://youtu.be/_8i8kN-2HAo", duration: "3:00",
+        description: "Understand how to simulate different geographical locations via IP addresses to test region-specific web applications.",
+        docs: [{label:"Simulate IP Geolocation", url:"https://www.browserstack.com/docs/live/device-settings/change-location"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
     ],
   },
