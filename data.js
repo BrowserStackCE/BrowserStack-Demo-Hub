@@ -621,59 +621,54 @@ const PRODUCTS = [
     iconSvg: "icons/icon-06.svg",
     videos: [
       {
-        id: "appaccessibility-1", title: "App Accessibility - Integrations", youtubeId: "", duration: "03:54",
+        id: "appaccessibility-1", title: "App Accessibility - Automated Testing", youtubeId: "https://youtu.be/YFa-9lFXxlg", duration: "03:54",
         description: "Learn how to integrate App Accessibility testing seamlessly into your existing CI/CD pipelines and tools.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Automated Accessibility Testing", url:"https://www.browserstack.com/docs/app-accessibility/automated-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-2", title: "App Accessibility - Introduction", youtubeId: "", duration: "02:17",
+        id: "appaccessibility-2", title: "App Accessibility - Introduction", youtubeId: "https://youtu.be/xMpEelSBQ_E", duration: "02:17",
         description: "Get a comprehensive overview of how to test and ensure WCAG compliance for your native mobile applications.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"App Accessibility Testing Overview", url:"https://www.browserstack.com/docs/app-accessibility"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-3", title: "App Accessibility - iOS Accessibility Scanner", youtubeId: "", duration: "02:31",
+        id: "appaccessibility-3", title: "App Accessibility - iOS Accessibility Scanner", youtubeId: "https://youtu.be/ueIWUaaHVlw", duration: "02:31",
         description: "Discover how to utilize the iOS Accessibility Scanner to identify and resolve compliance issues on Apple devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"iOS Accessibility Scanner with Workflow Analyzer", url:"https://www.browserstack.com/docs/app-accessibility/manual-tests/using-workflow-analyzer"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-4", title: "App Accessibility - IP Geolocation", youtubeId: "", duration: "03:02",
+        id: "appaccessibility-4", title: "App Accessibility - IP Geolocation", youtubeId: "https://youtu.be/pzU1WyoTpBM", duration: "03:02",
         description: "Learn how to simulate different geographic regions via IP geolocation to test localized accessibility features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"IP Geolocation Testing", url:"https://www.browserstack.com/docs/app-accessibility/location-testing/geolocation-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-5", title: "App Accessibility - Perform Scans", youtubeId: "", duration: "03:17",
-        description: "Understand how to execute automated accessibility scans on your native mobile apps to quickly find violations.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        id: "appaccessibility-5", title: "App Accessibility - Perform Manual Scans", youtubeId: "https://youtu.be/BC_Zjf4n2AU", duration: "03:17",
+        description: "Understand how to execute manual accessibility scans on your native mobile apps to quickly find violations.",
+        docs: [{label:"Perform Manual Accessibility Scans", url:"https://www.browserstack.com/docs/app-accessibility/manual-tests"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-6", title: "App Accessibility - Talkback on Android", youtubeId: "", duration: "03:04",
+        id: "appaccessibility-6", title: "App Accessibility - Talkback on Android", youtubeId: "https://youtu.be/OV66NlBMRVs", duration: "03:04",
         description: "Learn how to evaluate your Android app's compatibility with the native TalkBack screen reader on real devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"TalkBack Screen Reader Testing on Android", url:"https://www.browserstack.com/docs/app-accessibility/screen-reader-testing/talkback"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-7", title: "App Accessibility - Test Apps from Local Machine", youtubeId: "", duration: "03:00",
-        description: "See how to directly upload and test native mobile applications from your local development environment.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        id: "appaccessibility-7", title: "App Accessibility - Test Apps from Various Sources", youtubeId: "https://youtu.be/_J6NRgviCoo", duration: "03:00",
+        description: "See how to directly upload and test native mobile applications from different sources and integrations.",
+        docs: [{label:"Upload Apps from Various Sources", url:"https://www.browserstack.com/docs/app-accessibility/app-source"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "appaccessibility-8", title: "App Accessibility - Test Behind Firewalls", youtubeId: "", duration: "03:31",
         description: "Discover how to securely test internal, development, or staging mobile applications hosted behind corporate firewalls.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Behind Firewalls with Local Testing", url:"https://www.browserstack.com/docs/app-accessibility/local-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-9", title: "App Accessibility - Test Localization", youtubeId: "", duration: "03:02",
-        description: "Learn how to configure device language and region settings to ensure accessibility features work correctly worldwide.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      },
-      {
-        id: "appaccessibility-10", title: "App Accessibility - VoiceOver on iOS", youtubeId: "", duration: "03:24",
+        id: "appaccessibility-9", title: "App Accessibility - VoiceOver on iOS", youtubeId: "https://youtu.be/xeAxl_lqxSQ", duration: "03:24",
         description: "Understand how to test and navigate your iOS application using the native VoiceOver screen reader.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"VoiceOver Screen Reader Testing on iOS", url:"https://www.browserstack.com/docs/app-accessibility/screen-reader-testing/voiceover"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-11", title: "Reporting using BrowserStack App Accessibility", youtubeId: "", duration: "02:57",
+        id: "appaccessibility-10", title: "Reporting and Bug Tracking using BrowserStack App Accessibility", youtubeId: "https://youtu.be/aDAyxzEIze0", duration: "02:57",
         description: "Learn how to generate, analyze, and share detailed accessibility violation reports with your development team.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Accessibility Reports and Bug Tracking", url:"https://www.browserstack.com/docs/app-accessibility/reports"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }
     ],
   },
