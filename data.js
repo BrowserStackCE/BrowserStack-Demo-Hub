@@ -518,59 +518,59 @@ const PRODUCTS = [
     iconSvg: "icons/icon-06.svg",
     videos: [
       {
-        id: "accessibility-1", title: "Accessibility - Local Testing", youtubeId: "", duration: "03:20",
+        id: "accessibility-1", title: "Accessibility - Local Testing", youtubeId: "https://youtu.be/swqNin3o8r8", duration: "03:20",
         description: "Learn how to test internal or locally hosted websites for WCAG compliance using BrowserStack Local.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Set up local testing", url:"https://www.browserstack.com/docs/website-scanner/scan-settings/general/local-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-2", title: "Accessibility - Organise Test Runs", youtubeId: "", duration: "03:00",
+        id: "accessibility-2", title: "Accessibility - Organise Test Results", youtubeId: "https://youtu.be/8Fp37TXWB8s", duration: "03:00",
         description: "Discover how to structure, tag, and efficiently manage your accessibility test runs for better organization.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"View Scan Results", url:"https://www.browserstack.com/docs/website-scanner/view-scan-results"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-3", title: "Accessibility - Reports", youtubeId: "", duration: "08:06",
+        id: "accessibility-3", title: "Accessibility - Reports", youtubeId: "https://youtu.be/CVHqWxJ104A", duration: "08:06",
         description: "Understand how to interpret comprehensive accessibility reports and identify critical WCAG violations.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Check Reporting Capabilities", url:"https://www.browserstack.com/docs/accessibility/accessibility-testing-dashboard/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-4", title: "Accessibility - Run Accessibility Tests", youtubeId: "", duration: "03:28",
+        id: "accessibility-4", title: "Accessibility - Run Accessibility Checks with Automated Tests", youtubeId: "https://youtu.be/GRVP_YKeY8s", duration: "03:28",
         description: "See how to execute automated and manual accessibility scans on your web applications to find issues fast.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Get Started with Accessibility Automation", url:"https://www.browserstack.com/docs/accessibility/automated-tests/get-started"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-5", title: "Accessibility - Screen Reader", youtubeId: "", duration: "06:04",
+        id: "accessibility-5", title: "Accessibility - Screen Reader", youtubeId: "https://youtu.be/z_FLgHgRav8", duration: "06:04",
         description: "Learn how to use built-in screen readers on real devices to test compatibility with assistive technologies.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Get Started with Screen Reader Testing", url:"https://www.browserstack.com/docs/accessibility/screen-reader-launcher/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-6", title: "Accessibility - Share Reports", youtubeId: "", duration: "03:05",
+        id: "accessibility-6", title: "Accessibility - Share Reports", youtubeId: "https://youtu.be/nFXWTGTYl-Y", duration: "03:05",
         description: "Discover how to easily export and share detailed accessibility violation reports with your development team.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Share Reports", url:"https://www.browserstack.com/docs/accessibility/accessibility-testing-dashboard/share-reports-externally"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-7", title: "Accessibility - Test Functional Workflows", youtubeId: "", duration: "03:57",
+        id: "accessibility-7", title: "Accessibility - Test Functional Workflows", youtubeId: "https://youtu.be/_8AOD1MZ_OQ", duration: "05:09",
         description: "Learn how to perform accessibility testing on complex user journeys, dynamic content, and multi-step workflows.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Manual Testing and Monitoring", url:"https://www.browserstack.com/docs/accessibility/test-types"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-8", title: "Accessibility - Test Functional Components", youtubeId: "", duration: "05:08",
+        id: "accessibility-8", title: "Accessibility - Test Functional Components", youtubeId: "https://youtu.be/_8AOD1MZ_OQ", duration: "03:58",
         description: "Understand how to evaluate specific functional components like modals, forms, and navigation menus for accessibility.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Check Assisted Tests", url:"https://www.browserstack.com/docs/accessibility/assisted-tests/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-9", title: "Accessibility - Website Scanner Overview", youtubeId: "", duration: "04:10",
+        id: "accessibility-9", title: "Accessibility - Website Scanner Overview", youtubeId: "https://youtu.be/9pzFcV8qk6Y", duration: "04:10",
         description: "Get an overview of how to use the Website Scanner to crawl multiple pages and find accessibility issues at scale.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Scan and Monitor using Website Scanner", url:"https://www.browserstack.com/docs/accessibility/website-scanner/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-10", title: "Accessibility - Website Scanner Configuration", youtubeId: "", duration: "04:09",
+        id: "accessibility-10", title: "Accessibility - Website Scanner Configuration", youtubeId: "https://youtu.be/lixiGgfzfro", duration: "04:09",
         description: "Learn how to configure and customize the Website Scanner to target specific domains, URLs, or authenticated pages.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Configure the Website Scanner", url:"https://www.browserstack.com/docs/website-scanner/scan-settings"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "accessibility-11", title: "Compare Builds on Accessibility", youtubeId: "", duration: "02:30",
+        id: "accessibility-11", title: "Compare Builds on Accessibility", youtubeId: "https://youtu.be/PufZfGQJig4", duration: "02:30",
         description: "See how to track your website's accessibility health over time by comparing violation trends across different builds.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Compare Two Reports", url:"https://www.browserstack.com/docs/accessibility/accessibility-testing-dashboard/compare-reports"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }
     ],
   },
