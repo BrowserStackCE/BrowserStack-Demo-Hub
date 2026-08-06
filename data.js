@@ -299,11 +299,7 @@ const PRODUCTS = [
         description: "Learn how to utilize the interactive session feature for your automated builds to interact with them",
         docs: [{ label: "Interative Session", url: "https://www.browserstack.com/docs/automate/selenium/interactive-session?fw-lang=java%2Ftestng" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }, 
-      // {
-      //   id: "automate-12", title: "Automate - Integrations", youtubeId: "", duration: "02:12",
-      //   description: "Explore how to connect BrowserStack Automate with various testing frameworks, reporting dashboards, and third-party tools.",
-      //   docs: [{ label: "Integrations", url: "https://www.browserstack.com/docs/automate/playwright/get-started?fw-lang=nodejs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      // },
+
     ],
 },
   {
