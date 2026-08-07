@@ -435,117 +435,117 @@ const PRODUCTS = [
       {
         id: "test-management-1", title: "Test Management - Test Plans", youtubeId: "https://youtu.be/mHSFJPOIBDs", duration: "02:29",
         description: "Learn how to create, organize, and execute comprehensive test plans for your quality assurance workflows.",
-        docs: [{ label: "What is a Test Plan", url: "https://www.browserstack.com/docs/test-management/test-plans/what-is-test-plan" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Test Plans", url: "https://www.browserstack.com/docs/test-management/test-plans/what-is-test-plan" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-2", title: "Test Management - Two-Way Jira Sync", youtubeId: "https://youtu.be/lzF92oQ10GI", duration: "06:05",
         description: "Discover how to seamlessly sync bugs, requirements, and test statuses bidirectionally with Jira in real time.",
-        docs: [{ label: "Jira Integration", url: "https://www.browserstack.com/docs/test-management/jira/jira-integration" }, { label: "Jira App", url: "https://www.browserstack.com/docs/test-management/jira/jira-app" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Two-Way Jira Sync", url: "https://www.browserstack.com/docs/test-management/jira/jira-integration" }, { label: "Jira App", url: "https://www.browserstack.com/docs/test-management/jira/jira-app" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-3", title: "Test Management - API Reference", youtubeId: "https://youtu.be/ye9BnLvm1CI", duration: "03:23",
         description: "Understand how to leverage REST APIs to programmatically manage your test cases, test runs, and execution results.",
-        docs: [{ label: "API Reference Introduction", url: "https://www.browserstack.com/docs/test-management/api-reference/introduction" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "API Reference", url: "https://www.browserstack.com/docs/test-management/api-reference/introduction" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-4", title: "Test Management - Automated Test Runs", youtubeId: "https://youtu.be/qs6_j8KMjkM", duration: "04:38",
         description: "See how to link, execute, and track your automated test suite runs directly within the Test Management interface.",
-        docs: [{ label: "Manage Automated Test Runs", url: "https://www.browserstack.com/docs/test-management/overview/automated-test-runs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Automated Test Runs", url: "https://www.browserstack.com/docs/test-management/overview/automated-test-runs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-5", title: "Test Management - Custom Form Fields", youtubeId: "https://youtu.be/At-8r1LXeHc", duration: "03:39",
         description: "See how to configure custom form fields to extend test case attributes and match your team's specific metadata requirements.",
-        docs: [{ label: "Set Custom Form Fields", url: "https://www.browserstack.com/docs/test-management/advanced-features/custom-form-fields" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Custom Form Fields", url: "https://www.browserstack.com/docs/test-management/advanced-features/custom-form-fields" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-6", title: "Test Management - Reports & Analysis", youtubeId: "https://youtu.be/oTdb0WhZLcM", duration: "03:25",
         description: "Understand how to analyze test coverage, pass rates, and critical quality metrics using built-in reporting tools.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Reports & Analysis", url: "https://www.browserstack.com/docs/test-management/reports-and-analytics/reports" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-7", title: "Test Management - Real-Time Dashboards", youtubeId: "https://youtu.be/O5Jro_Osi50", duration: "01:45",
         description: "Get an overview of customizable dashboards that provide actionable insights and high-level visibility into testing progress.",
-        docs: [{ label: "Configure Real Time Dashboards", url: "https://www.browserstack.com/docs/test-reporting-and-analytics/dashboards/build-dashboards" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Real-Time Dashboards", url: "https://www.browserstack.com/docs/test-reporting-and-analytics/dashboards" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-8", title: "Test Management - ID Tagging", youtubeId: "https://youtu.be/dX75fZw4rqs", duration: "03:32",
         description: "Learn how to use TCM ID tags in TestNG to automatically map execution results back to manual test cases.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "ID Tagging", url: "https://www.browserstack.com/docs/test-management/test-runs/test-case-tagging" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-9", title: "Test Management - Integrate with CI/CD", youtubeId: "https://youtu.be/Ixr11C2AflU", duration: "02:27",
         description: "See how to integrate Test Management into your continuous integration and deployment pipelines for automated result tracking.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Integrate with CI/CD", url: "https://www.browserstack.com/docs/test-management/overview/ci-cd-integration" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-10", title: "Test Management - AI Test Runs", youtubeId: "https://youtu.be/V97U-h-T0vU", duration: "01:06",
         description: "Discover how to leverage AI capabilities to automatically generate and execute test runs with minimal manual overhead.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "AI Test Runs", url: "https://www.browserstack.com/docs/test-management/browserstack-ai/test-selection-agent" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-11", title: "Test Management - Xray Quick Import", youtubeId: "https://youtu.be/QQawq_UUVJA", duration: "01:39",
         description: "Learn how to quickly migrate and import your existing test repositories directly from Jira Xray.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Xray Quick Import", url: "https://www.browserstack.com/docs/test-management/quick-import/xray" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-12", title: "Test Management - Low Code Automation", youtubeId: "https://youtu.be/TdGVZoM0Obk", duration: "02:35",
         description: "Discover how to bridge the gap between manual testing and automation using AI-driven, low-code solutions.",
-        docs: [{ label: "Integrate with Low Code Automation", url: "https://www.browserstack.com/docs/test-management/browserstack-ai/low-code-authoring" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Low Code Automation", url: "https://www.browserstack.com/docs/test-management/browserstack-ai/low-code-authoring" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-13", title: "Test Management - Test Reporting & Analysis", youtubeId: "https://youtu.be/KoDz4T4nqSU", duration: "01:30",
         description: "See how to connect Test Management with Test Reporting & Analysis for deep insights into test failures and build performance.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Test Reporting & Analysis", url: "https://www.browserstack.com/docs/test-management/upload-reports-cli" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-14", title: "Test Management - Manual Test Execution", youtubeId: "https://youtu.be/D4gfC1CcQ8Y", duration: "05:08",
         description: "See how testers can execute manual test runs, log step-by-step results, and track execution statuses in real time.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Manual Test Execution", url: "https://www.browserstack.com/docs/test-management/overview/manual-test-runs" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-15", title: "Test Management - Quick Import via CSV", youtubeId: "https://youtu.be/pYpwL4gU1O4", duration: "01:40",
         description: "Learn how to rapidly bulk-import your existing test cases from spreadsheets or CSV files.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Quick Import via CSV", url: "https://www.browserstack.com/docs/test-management/quick-import/import-csv" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-16", title: "Test Management - AI Test Cases", youtubeId: "https://youtu.be/WtPx_5HLatM", duration: "03:29",
         description: "Learn how to generate structured test cases instantly using AI-powered drafting features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "AI Test Cases", url: "https://www.browserstack.com/docs/test-management/browserstack-ai/ai-generated-test-cases" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-17", title: "Test Management - SDK ID Tagging", youtubeId: "https://youtu.be/QlEaTcbQhX0", duration: "02:53",
         description: "See how to use the BrowserStack SDK to tag test cases and automatically map automated results to Test Management.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "SDK ID Tagging", url: "https://www.browserstack.com/docs/test-management/test-runs/test-case-tagging" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-18", title: "Test Management - Requirements Traceability Reporting", youtubeId: "https://youtu.be/XthuwXbVRfY", duration: "03:42",
         description: "Learn how to map test cases to requirements and epics to ensure full test coverage and end-to-end traceability.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Requirements Traceability Reporting", url: "https://www.browserstack.com/docs/test-management/reports-and-analytics/reports/requirement-traceability-report" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-19", title: "Test Management - Zephyr Scale Quick Import", youtubeId: "https://youtu.be/hVjXOW70E50", duration: "01:54",
         description: "Learn how to seamlessly import your existing test assets and suites from Zephyr Scale into Test Management.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Zephyr Scale Quick Import", url: "https://www.browserstack.com/docs/test-management/quick-import/zephyr" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-20", title: "Test Management - Test Cases Overview", youtubeId: "https://youtu.be/Sm8UO7pwkmc", duration: "03:10",
         description: "Learn how to create, view, and organize test cases efficiently within structured folders for streamlined test suites.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Test Cases Overview", url: "https://www.browserstack.com/docs/test-management/test-cases/manage-test-cases" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-21", title: "Test Management - TestRail Quick Import", youtubeId: "https://youtu.be/wSgxOaJVJCM", duration: "02:19",
         description: "Discover how to easily migrate your complete test case database and history from TestRail into Test Management.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "TestRail Quick Import", url: "https://www.browserstack.com/docs/test-management/quick-import/testrail" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-22", title: "Test Management - Custom Result Fields", youtubeId: "https://youtu.be/NyhgAHyMtY0", duration: "05:00",
         description: "Learn how to define custom result fields to capture specialized execution status details tailored to your team's process.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Custom Result Fields", url: "https://www.browserstack.com/docs/test-management/advanced-features/custom-result-fields" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "test-management-23", title: "Test Management - Test Case Workflows", youtubeId: "https://youtu.be/mvki90tAY08", duration: "08:40",
         description: "Discover best practices for bulk-editing, organizing, and managing the entire lifecycle of your test case repository.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{ label: "Test Case Workflows", url: "https://www.browserstack.com/docs/test-management/test-cases/manage-test-cases" }], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
     ],
   },
@@ -569,7 +569,7 @@ const PRODUCTS = [
       {
         id: "accessibility-3", title: "Accessibility - Reports", youtubeId: "https://youtu.be/CVHqWxJ104A", duration: "08:06",
         description: "Understand how to interpret comprehensive accessibility reports and identify critical WCAG violations.",
-        docs: [{label:"Check Reporting Capabilities", url:"https://www.browserstack.com/docs/accessibility/accessibility-testing-dashboard/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Check Reporting Capabilities", url:"https://www.browserstack.com/docs/test-management/reports-and-analytics"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "accessibility-4", title: "Accessibility - Run Accessibility Checks with Automated Tests", youtubeId: "https://youtu.be/GRVP_YKeY8s", duration: "03:28",
