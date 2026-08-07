@@ -214,7 +214,10 @@ function renderDashboard(pid) {
     </div>`
   ).join("");
   app.innerHTML = `
-    <div class="crumbs fade"><a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span><span>${esc(p.name)}</span></div>
+    <div class="crumbs fade">
+      <button class="back-btn" onclick="location.hash='#/'">&#8592; Back</button>
+      <a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span><span>${esc(p.name)}</span>
+    </div>
     <header class="hero fade" style="text-align:left;margin-bottom:32px;">
       <h1 style="font-size:2.4rem;display:flex;align-items:center;gap:12px;">
         ${p.iconSvg ? `<img src="${p.iconSvg}" alt="" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;" />` : `<span>${p.icon}</span>`}
@@ -266,6 +269,7 @@ function renderVideo(pid, vid) {
     .join("");
   app.innerHTML = `
     <div class="crumbs fade">
+      <button class="back-btn" onclick="location.hash='#/product/${p.id}'">&#8592; Back</button>
       <a onclick="location.hash='#/'">BrowserStack Demo Hub</a><span>›</span>
       <a onclick="location.hash='#/product/${p.id}'">${esc(p.name)}</a><span>›</span>
       <span>${esc(v.title)}</span>

@@ -125,6 +125,19 @@ body,
 .navbar.is-home .nav-cta { display: none; }
 .nav-cta { cursor: pointer; }
 
+/* Back button — sits in the breadcrumb row */
+.back-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.82rem; font-weight: 600; color: var(--muted);
+  padding: 5px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg-alt);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  white-space: nowrap; margin-right: 8px; flex-shrink: 0;
+}
+.back-btn:hover { background: var(--border); color: var(--ink); transform: translateX(-2px); }
+[data-theme="dark"] .back-btn { background: var(--bg-alt); border-color: var(--border); color: var(--muted); }
+[data-theme="dark"] .back-btn:hover { background: #252d3d; color: var(--ink); }
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
