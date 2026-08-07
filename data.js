@@ -864,7 +864,7 @@ const PRODUCTS = [
         docs: [{label:"Debugging",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/debug"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }
     ],
-  }
+  },
   {
     id: "percy",
     name: "Percy",
