@@ -275,12 +275,14 @@ function renderVideo(pid, vid) {
       <span>${esc(v.title)}</span>
     </div>
     <div class="detail fade">
-      <div class="glass player-wrap">
-        <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, widgetReferrer: location.href })}" title="${esc(v.title)}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
-      </div>
-      <div class="glass panel desc-panel">
-        <h2>${esc(v.title)}</h2>
-        <p>${esc(v.description)}</p>
+      <div class="main-col">
+        <div class="glass player-wrap">
+          <iframe id="yt-player" src="${embedUrl(v, { jsapi: true, widgetReferrer: location.href })}" title="${esc(v.title)}" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="origin"></iframe>
+        </div>
+        <div class="glass panel desc-panel">
+          <h2>${esc(v.title)}</h2>
+          <p>${esc(v.description)}</p>
+        </div>
       </div>
       <div class="side">
         <div class="glass panel pl-panel">
