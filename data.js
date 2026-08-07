@@ -791,81 +791,80 @@ const PRODUCTS = [
       {
         id: "tra-1", title: "Test Reporting & Analytics - Collaboration", youtubeId: "https://youtu.be/LsHGtMIRo38", duration: "02:20",
         description: "Learn how to collaborate effectively with your team by sharing insights and test reports using Test Reporting and Analytics.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{"label": "Collaborate Docs","url": "https://www.browserstack.com/docs/test-reporting-and-analytics/features/collaborate"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-2", title: "Test Reporting & Analytics - JUNIT Upload", youtubeId: "https://youtu.be/xdJbw5ZmSSY", duration: "02:12",
         description: "Discover how to easily upload JUnit XML reports to centralized dashboards for deeper analysis and reporting.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"JUNIT Upload",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/getting-started/junit-xml-reports/integrate-your-tests"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-3", title: "Test Reporting & Analytics - Quality Gates", youtubeId: "https://youtu.be/rn7Nuk0JpfE", duration: "04:56",
         description: "Understand how to configure strict quality gates to automatically block releases that don't meet your testing standards.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Quality Gates",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/quality-gate/overview"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-4", title: "Test Reporting & Analytics - CI/CD Integration", youtubeId: "https://youtu.be/uTnHqPZ2YAU", duration: "01:50",
         description: "See how to seamlessly integrate Test Reporting & Analytics into your existing CI/CD pipelines for continuous reporting.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"CI/CD Integration",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/integrations/ci-cd/jenkins"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-5", title: "Test Reporting & Analytics - Custom Dashboards", youtubeId: "https://youtu.be/b3lG6PxGmE4", duration: "02:41",
         description: "Learn how to build and customize dashboards to monitor the exact metrics and KPIs that matter most to your team.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Custom Dashboards",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/dashboards/build-dashboards"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-6", title: "Test Reporting & Analytics - Failure Analysis", youtubeId: "https://youtu.be/yEfPETIk8lo", duration: "01:41",
         description: "Discover how to utilize AI-driven failure analysis to quickly pinpoint the root cause of broken automated tests.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Failure Analysis",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/auto-failure-analysis"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-7", title: "Test Reporting & Analytics - Smart Tags", youtubeId: "https://youtu.be/B9Dqn7tJdU4", duration: "01:22",
         description: "Learn how to use smart tags to efficiently categorize, filter, and organize your vast automated test runs.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Smart Tags",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/smart-tags"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-8", title: "Test Reporting & Analytics - Testing Trends", youtubeId: "https://youtu.be/B0Xxe_nHF8Q", duration: "03:13",
         description: "Understand how to track historical testing trends over time to evaluate the health and stability of your automation suite.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Testing Trends",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/testing-trends"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-9", title: "Test Reporting & Analytics - Unique Errors", youtubeId: "https://youtu.be/PDSQDqqlZXE", duration: "02:23",
         description: "See how Test Reporting & Analytics automatically groups identical failures into unique errors to help prioritize bug fixes.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Unique Errors",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/unique-errors"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-10", title: "Test Reporting & Analysis - BrowserStack SDK", youtubeId: "https://youtu.be/qtNJXG3rOn8", duration: "03:35",
         description: "Get a quick walkthrough on integrating and configuring the BrowserStack SDK to instantly capture logs, execution data, and rich test observability metrics.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"BrowserStack SDK",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/overview/one-tool-for-every-test"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-11", title: "Test Reporting & Analytics - Webhooks", youtubeId: "https://youtu.be/bxyYQOyFLbo", duration: "03:22",
         description: "Learn how to set up and configure webhooks to receive real-time notifications for critical test execution events.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"WebHooks",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/webhooks"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-12", title: "Test Reporting & Analytics - Alerts", youtubeId: "https://youtu.be/vbIwg7cjz2k", duration: "04:33",
         description: "Discover how to configure custom alerts to stay informed about test failures, flaky behavior, and performance drops.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Custom Alerts",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/alerts-notifications"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-13", title: "Test Reporting & Analysis - Testing Health", youtubeId: "https://youtu.be/zg8w0sh1SSk", duration: "04:05",
         description: "Learn how to monitor your overall testing health and evaluate key build stability indicators to ensure consistent software delivery quality.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Tests Health",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/features/tests-health"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-14", title: "Test Reporting & Analysis - Monitoring", youtubeId: "https://youtu.be/E3iF6M3IYDY", duration: "02:55",
         description: "Discover how to effectively monitor your test suites by analyzing build runs, tracking test health, visualizing long-term trends, and setting up automated alerts for actionable insights.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Monitoring",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/monitor"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "tra-15", title: "Test Reporting & Analysis - Debugging Test Suites", youtubeId: "https://youtu.be/WpkIBtQBTl4", duration: "09:38",
         description: "Learn how to quickly identify, troubleshoot, and resolve failing test suites using detailed logs, execution timelines, and diagnostic insights.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Debugging",url:"https://www.browserstack.com/docs/test-reporting-and-analytics/debug"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }
     ],
-  },
-
+  }
   {
     id: "percy",
     name: "Percy",
