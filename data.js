@@ -341,7 +341,7 @@ const PRODUCTS = [
 
     ],
 },
-  {
+{
     id: "app-automate",
     name: "App Automate",
     tagline: "Automated mobile app testing on real devices",
@@ -349,79 +349,79 @@ const PRODUCTS = [
     iconSvg: "icons/icon-09.svg",
     videos: [
       {
-        id: "app-automate-1", title: "App Automate - Getting Started", youtubeId: "", duration: "04:54",
+        id: "app-automate-1", title: "App Automate - Getting Started", youtubeId: "https://youtu.be/gCsFgwg78Ik", duration: "04:55",
         description: "Learn the basics of configuring and running your first automated mobile app test on BrowserStack's real device cloud.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Getting Started",url:"https://www.browserstack.com/docs/app-automate/appium?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-2", title: "App Automate - Appium Inspector", youtubeId: "", duration: "03:45",
-        description: "Learn how to use Appium Inspector with App Automate to inspect app elements and write robust automated test scripts.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      },
-      {
-        id: "app-automate-3", title: "App Automate - Apple Pay Workflows", youtubeId: "", duration: "03:32",
+        id: "app-automate-2", title: "App Automate - Apple Pay Workflows", youtubeId: "https://youtu.be/P8hQn-GkQPw", duration: "03:33",
         description: "Discover how to automate the testing of Apple Pay transactions and payment workflows on real iOS devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Apple Pay Workflows",url:"https://www.browserstack.com/docs/app-automate/appium/apple-pay?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-4", title: "App Automate - Audio Injection", youtubeId: "", duration: "02:38",
+        id: "app-automate-3", title: "App Automate - Audio Injection", youtubeId: "https://youtu.be/2mDoDv91P54", duration: "02:39",
         description: "Learn how to inject audio files into automated test sessions to verify voice-driven app features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Audio Injection",url:"https://www.browserstack.com/docs/app-automate/appium/audio-injection?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-5", title: "App Automate - Debugging Capabilities", youtubeId: "", duration: "09:16",
+        id: "app-automate-4", title: "App Automate - Debugging Capabilities", youtubeId: "https://youtu.be/sysBy4DS2bg", duration: "09:17",
         description: "Explore the comprehensive debugging tools like video recordings, text logs, and network logs available for troubleshooting tests.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Debugging Capabilities",url:"https://www.browserstack.com/docs/app-automate/appium/set-up-tests/debugging-options?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-6", title: "App Automate - Device Passwords", youtubeId: "", duration: "02:43",
+        id: "app-automate-5", title: "App Automate - Device Passwords", youtubeId: "https://youtu.be/E1MiDLvEP0Q", duration: "02:44",
         description: "Learn how to automate test cases that require interacting with device lock screens or entering device passcodes.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Device Passwords",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/passcode-protected-devices?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-7", title: "App Automate - File Upload", youtubeId: "", duration: "02:50",
-        description: "Understand how to push and upload files from your local machine to the remote device during automated test runs.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      },
-      {
-        id: "app-automate-8", title: "App Automate - Image Injection", youtubeId: "", duration: "04:26",
-        description: "Discover how to mock camera inputs with custom images to automate testing for features like barcode and QR code scanning.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      },
-      {
-        id: "app-automate-9", title: "App Automate - Katalon Studio Integration", youtubeId: "", duration: "03:59",
-        description: "See how to seamlessly integrate BrowserStack App Automate with Katalon Studio for comprehensive mobile app testing.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
-      },
-      {
-        id: "app-automate-10", title: "App Automate - Local Testing", youtubeId: "", duration: "04:31",
+        id: "app-automate-6", title: "App Automate - Local Testing", youtubeId: "https://youtu.be/tJlsgMXibcs", duration: "04:32",
         description: "Learn how to securely automate mobile app tests against local, development, or staging environments using BrowserStack Local.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Local Testing",url:"https://www.browserstack.com/docs/app-automate/appium/getting-started/java/testng/local-testing?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-11", title: "App Automate - SIM Use-Case", youtubeId: "", duration: "02:42",
+        id: "app-automate-7", title: "App Automate - SIM Use-Case", youtubeId: "https://youtu.be/lekH2X2V8EQ", duration: "02:43",
         description: "Understand how to automate workflows relying on cellular networks, such as SMS or OTP verification, using real SIM-enabled devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"SIM Use-Case",url:"https://www.browserstack.com/docs/app-automate/appium/sim-devices?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-12", title: "App Automate - Test Flutter Apps", youtubeId: "", duration: "02:33",
+        id: "app-automate-8", title: "App Automate - Test Flutter Apps", youtubeId: "https://youtu.be/TUHpG49T0k4", duration: "02:34",
         description: "Discover how to write and execute automated tests specifically designed for cross-platform Flutter applications on real devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Flutter Apps",url:"https://www.browserstack.com/docs/app-automate/appium/test-hybrid-apps/test-flutter-apps?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-13", title: "App Automate - Testing Web Views", youtubeId: "", duration: "02:49",
+        id: "app-automate-9", title: "App Automate - Testing Web Views", youtubeId: "https://youtu.be/Ac9nsdvHDiY", duration: "02:50",
         description: "Learn how to successfully automate interactions and test elements within WebViews embedded inside your native mobile applications.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Testing Web Views",url:"https://www.browserstack.com/docs/app-automate/appium?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-14", title: "App Automate - Test Orchestration", youtubeId: "", duration: "02:51",
+        id: "app-automate-10", title: "App Automate - Test Orchestration", youtubeId: "https://youtu.be/RyGe88htD14", duration: "02:52",
         description: "See how to optimize your test execution and manage complex automated test suites using test orchestration techniques.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Orchestration",url:"https://www.browserstack.com/docs/app-automate/appium/test-orchestration?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-15", title: "App Automate - Video Injection", youtubeId: "", duration: "02:48",
+        id: "app-automate-11", title: "App Automate - Video Injection", youtubeId: "https://youtu.be/ka2s6DKKaK8", duration: "02:49",
         description: "Learn how to inject video files into the device camera stream to automate testing for live video capture and processing features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Video Injection",url:"https://www.browserstack.com/docs/app-automate/appium/troubleshooting/app-webview?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "app-automate-12", title: "App Automate - Appium Inspector", youtubeId: "https://youtu.be/CjMWeBvmm0I", duration: "03:46",
+        description: "Learn how to use Appium Inspector with App Automate to inspect app elements and write robust automated test scripts.",
+        docs: [{label:"Appium Inspector",url:"https://www.browserstack.com/docs/app-automate/appium/integrations/appium-desktop?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "app-automate-13", title: "App Automate - File Upload", youtubeId: "https://youtu.be/zKNmgcS7C2s", duration: "02:51",
+        description: "Understand how to push and upload files from your local machine to the remote device during automated test runs.",
+        docs: [{label:"File Upload",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/upload-files?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "app-automate-14", title: "App Automate - Image Injection", youtubeId: "https://youtu.be/2fJUVPxbuLU", duration: "04:27",
+        description: "Discover how to mock camera inputs with custom images to automate testing for features like barcode and QR code scanning.",
+        docs: [{label:"Image Injection",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/camera-image-injection?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "app-automate-15", title: "App Automate - Katalon Studio Integration", youtubeId: "https://youtu.be/27XRQ1Gr2y0", duration: "04:00",
+        description: "See how to seamlessly integrate BrowserStack App Automate with Katalon Studio for comprehensive mobile app testing.",
+        docs: [{label:"Katalon Studio Integration",url:"https://www.browserstack.com/docs/app-automate/appium/integrations/katalon-studio?fw-lang=java%2Ftestng"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
     ],
   },
@@ -621,54 +621,59 @@ const PRODUCTS = [
     iconSvg: "icons/icon-06.svg",
     videos: [
       {
-        id: "appaccessibility-1", title: "App Accessibility - Automated Testing", youtubeId: "https://youtu.be/YFa-9lFXxlg", duration: "03:54",
+        id: "appaccessibility-1", title: "App Accessibility - Integrations", youtubeId: "", duration: "03:54",
         description: "Learn how to integrate App Accessibility testing seamlessly into your existing CI/CD pipelines and tools.",
-        docs: [{label:"Automated Accessibility Testing", url:"https://www.browserstack.com/docs/app-accessibility/automated-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-2", title: "App Accessibility - Introduction", youtubeId: "https://youtu.be/xMpEelSBQ_E", duration: "02:17",
+        id: "appaccessibility-2", title: "App Accessibility - Introduction", youtubeId: "", duration: "02:17",
         description: "Get a comprehensive overview of how to test and ensure WCAG compliance for your native mobile applications.",
-        docs: [{label:"App Accessibility Testing Overview", url:"https://www.browserstack.com/docs/app-accessibility"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-3", title: "App Accessibility - iOS Accessibility Scanner", youtubeId: "https://youtu.be/ueIWUaaHVlw", duration: "02:31",
+        id: "appaccessibility-3", title: "App Accessibility - iOS Accessibility Scanner", youtubeId: "", duration: "02:31",
         description: "Discover how to utilize the iOS Accessibility Scanner to identify and resolve compliance issues on Apple devices.",
-        docs: [{label:"iOS Accessibility Scanner with Workflow Analyzer", url:"https://www.browserstack.com/docs/app-accessibility/manual-tests/using-workflow-analyzer"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-4", title: "App Accessibility - IP Geolocation", youtubeId: "https://youtu.be/pzU1WyoTpBM", duration: "03:02",
+        id: "appaccessibility-4", title: "App Accessibility - IP Geolocation", youtubeId: "", duration: "03:02",
         description: "Learn how to simulate different geographic regions via IP geolocation to test localized accessibility features.",
-        docs: [{label:"IP Geolocation Testing", url:"https://www.browserstack.com/docs/app-accessibility/location-testing/geolocation-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-5", title: "App Accessibility - Perform Manual Scans", youtubeId: "https://youtu.be/BC_Zjf4n2AU", duration: "03:17",
-        description: "Understand how to execute manual accessibility scans on your native mobile apps to quickly find violations.",
-        docs: [{label:"Perform Manual Accessibility Scans", url:"https://www.browserstack.com/docs/app-accessibility/manual-tests"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        id: "appaccessibility-5", title: "App Accessibility - Perform Scans", youtubeId: "", duration: "03:17",
+        description: "Understand how to execute automated accessibility scans on your native mobile apps to quickly find violations.",
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-6", title: "App Accessibility - Talkback on Android", youtubeId: "https://youtu.be/OV66NlBMRVs", duration: "03:04",
+        id: "appaccessibility-6", title: "App Accessibility - Talkback on Android", youtubeId: "", duration: "03:04",
         description: "Learn how to evaluate your Android app's compatibility with the native TalkBack screen reader on real devices.",
-        docs: [{label:"TalkBack Screen Reader Testing on Android", url:"https://www.browserstack.com/docs/app-accessibility/screen-reader-testing/talkback"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-7", title: "App Accessibility - Test Apps from Various Sources", youtubeId: "https://youtu.be/_J6NRgviCoo", duration: "03:00",
-        description: "See how to directly upload and test native mobile applications from different sources and integrations.",
-        docs: [{label:"Upload Apps from Various Sources", url:"https://www.browserstack.com/docs/app-accessibility/app-source"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        id: "appaccessibility-7", title: "App Accessibility - Test Apps from Local Machine", youtubeId: "", duration: "03:00",
+        description: "See how to directly upload and test native mobile applications from your local development environment.",
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
         id: "appaccessibility-8", title: "App Accessibility - Test Behind Firewalls", youtubeId: "", duration: "03:31",
         description: "Discover how to securely test internal, development, or staging mobile applications hosted behind corporate firewalls.",
-        docs: [{label:"Test Behind Firewalls with Local Testing", url:"https://www.browserstack.com/docs/app-accessibility/local-testing"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-9", title: "App Accessibility - VoiceOver on iOS", youtubeId: "https://youtu.be/xeAxl_lqxSQ", duration: "03:24",
+        id: "appaccessibility-9", title: "App Accessibility - Test Localization", youtubeId: "", duration: "03:02",
+        description: "Learn how to configure device language and region settings to ensure accessibility features work correctly worldwide.",
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+      },
+      {
+        id: "appaccessibility-10", title: "App Accessibility - VoiceOver on iOS", youtubeId: "", duration: "03:24",
         description: "Understand how to test and navigate your iOS application using the native VoiceOver screen reader.",
-        docs: [{label:"VoiceOver Screen Reader Testing on iOS", url:"https://www.browserstack.com/docs/app-accessibility/screen-reader-testing/voiceover"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "appaccessibility-10", title: "Reporting and Bug Tracking using BrowserStack App Accessibility", youtubeId: "https://youtu.be/aDAyxzEIze0", duration: "02:57",
+        id: "appaccessibility-11", title: "Reporting using BrowserStack App Accessibility", youtubeId: "", duration: "02:57",
         description: "Learn how to generate, analyze, and share detailed accessibility violation reports with your development team.",
-        docs: [{label:"Accessibility Reports and Bug Tracking", url:"https://www.browserstack.com/docs/app-accessibility/reports"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       }
     ],
   },
