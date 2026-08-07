@@ -349,79 +349,79 @@ const PRODUCTS = [
     iconSvg: "icons/icon-09.svg",
     videos: [
       {
-        id: "app-automate-1", title: "App Automate - Getting Started", youtubeId: "", duration: "04:54",
+        id: "app-automate-1", title: "App Automate - Getting Started", youtubeId: "https://youtu.be/gCsFgwg78Ik", duration: "04:54",
         description: "Learn the basics of configuring and running your first automated mobile app test on BrowserStack's real device cloud.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Get Started with App Automate", url:"https://www.browserstack.com/docs/app-automate/appium/get-started?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-2", title: "App Automate - Appium Inspector", youtubeId: "", duration: "03:45",
+        id: "app-automate-2", title: "App Automate - Appium Inspector", youtubeId: "https://youtu.be/CjMWeBvmm0I", duration: "03:45",
         description: "Learn how to use Appium Inspector with App Automate to inspect app elements and write robust automated test scripts.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Use Appium Inspector",url:"https://www.browserstack.com/docs/app-automate/appium/integrations/appium-desktop?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-3", title: "App Automate - Apple Pay Workflows", youtubeId: "", duration: "03:32",
+        id: "app-automate-3", title: "App Automate - Apple Pay Workflows", youtubeId: "https://youtu.be/P8hQn-GkQPw", duration: "03:32",
         description: "Discover how to automate the testing of Apple Pay transactions and payment workflows on real iOS devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Apple Pay on Real iOS devices",url:"https://www.browserstack.com/docs/app-automate/appium/apple-pay?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-4", title: "App Automate - Audio Injection", youtubeId: "", duration: "02:38",
+        id: "app-automate-4", title: "App Automate - Audio Injection", youtubeId: "https://youtu.be/2mDoDv91P54", duration: "02:38",
         description: "Learn how to inject audio files into automated test sessions to verify voice-driven app features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Upload and Play Audio Files",url:"https://www.browserstack.com/docs/app-automate/appium/audio-injection?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-5", title: "App Automate - Debugging Capabilities", youtubeId: "", duration: "09:16",
+        id: "app-automate-5", title: "App Automate - Debugging Capabilities", youtubeId: "https://youtu.be/sysBy4DS2bg", duration: "09:16",
         description: "Explore the comprehensive debugging tools like video recordings, text logs, and network logs available for troubleshooting tests.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Set debugging options and capabilities",url:"https://www.browserstack.com/docs/app-automate/appium/set-up-tests/debugging-options?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-6", title: "App Automate - Device Passwords", youtubeId: "", duration: "02:43",
+        id: "app-automate-6", title: "App Automate - Device Passwords", youtubeId: "https://youtu.be/E1MiDLvEP0Q", duration: "02:43",
         description: "Learn how to automate test cases that require interacting with device lock screens or entering device passcodes.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test using passcode-protected devices",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/passcode-protected-devices?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-7", title: "App Automate - File Upload", youtubeId: "", duration: "02:50",
+        id: "app-automate-7", title: "App Automate - File Upload", youtubeId: "https://youtu.be/zKNmgcS7C2s", duration: "02:50",
         description: "Understand how to push and upload files from your local machine to the remote device during automated test runs.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Upload your files on App Automate",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/upload-files?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-8", title: "App Automate - Image Injection", youtubeId: "", duration: "04:26",
+        id: "app-automate-8", title: "App Automate - Image Injection", youtubeId: "https://youtu.be/2fJUVPxbuLU", duration: "04:26",
         description: "Discover how to mock camera inputs with custom images to automate testing for features like barcode and QR code scanning.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test camera image injection",url:"https://www.browserstack.com/docs/app-automate/appium/advanced-features/camera-image-injection?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-9", title: "App Automate - Katalon Studio Integration", youtubeId: "", duration: "03:59",
+        id: "app-automate-9", title: "App Automate - Katalon Studio Integration", youtubeId: "https://youtu.be/27XRQ1Gr2y0", duration: "03:59",
         description: "See how to seamlessly integrate BrowserStack App Automate with Katalon Studio for comprehensive mobile app testing.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Run Appium Scripts with Katalon Studio",url:"https://www.browserstack.com/docs/app-automate/appium/integrations/katalon-studio?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-10", title: "App Automate - Local Testing", youtubeId: "", duration: "04:31",
+        id: "app-automate-10", title: "App Automate - Local Testing", youtubeId: "https://youtu.be/tJlsgMXibcs", duration: "04:31",
         description: "Learn how to securely automate mobile app tests against local, development, or staging environments using BrowserStack Local.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Use Local Testing",url:"https://www.browserstack.com/docs/app-automate/appium/getting-started/python/local-testing?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-11", title: "App Automate - SIM Use-Case", youtubeId: "", duration: "02:42",
+        id: "app-automate-11", title: "App Automate - SIM Use-Case", youtubeId: "https://youtu.be/lekH2X2V8EQ", duration: "02:42",
         description: "Understand how to automate workflows relying on cellular networks, such as SMS or OTP verification, using real SIM-enabled devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test on devices with SIM",url:"https://www.browserstack.com/docs/app-automate/appium/sim-devices?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-12", title: "App Automate - Test Flutter Apps", youtubeId: "", duration: "02:33",
+        id: "app-automate-12", title: "App Automate - Test Flutter Apps", youtubeId: "https://youtu.be/TUHpG49T0k4", duration: "02:33",
         description: "Discover how to write and execute automated tests specifically designed for cross-platform Flutter applications on real devices.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Flutter Applications",url:"https://www.browserstack.com/docs/app-automate/appium/test-hybrid-apps/test-flutter-apps?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-13", title: "App Automate - Testing Web Views", youtubeId: "", duration: "02:49",
+        id: "app-automate-13", title: "App Automate - Testing Web Views", youtubeId: "https://youtu.be/Ac9nsdvHDiY", duration: "02:49",
         description: "Learn how to successfully automate interactions and test elements within WebViews embedded inside your native mobile applications.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Webview scenarios",url:"https://www.browserstack.com/docs/app-automate/appium/troubleshooting/app-webview?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-14", title: "App Automate - Test Orchestration", youtubeId: "", duration: "02:51",
+        id: "app-automate-14", title: "App Automate - Test Orchestration", youtubeId: "https://youtu.be/RyGe88htD14", duration: "02:51",
         description: "See how to optimize your test execution and manage complex automated test suites using test orchestration techniques.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Configure Test Orchestration and Selection",url:"https://www.browserstack.com/docs/app-automate/appium/test-orchestration?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
       {
-        id: "app-automate-15", title: "App Automate - Video Injection", youtubeId: "", duration: "02:48",
+        id: "app-automate-15", title: "App Automate - Video Injection", youtubeId: "https://youtu.be/ka2s6DKKaK8", duration: "02:48",
         description: "Learn how to inject video files into the device camera stream to automate testing for live video capture and processing features.",
-        docs: [], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
+        docs: [{label:"Test Video Injection",url:"https://www.browserstack.com/docs/app-automate/appium/video-injection?fw-lang=python"}], links: [{ label: "Contact BrowserStack Support", url: "https://www.browserstack.com/contact?ref=helpdesk-bottom-contact-us-cta" }]
       },
     ],
   },
